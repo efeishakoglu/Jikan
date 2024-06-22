@@ -1,6 +1,6 @@
 Overview
 ========
-<img src="https://github.com/ushumgigal/hierodule/blob/main/hierodule.png" />
+<img src="https://raw.githubusercontent.com/ushumgigal/hierodule/main/hierodule.png" />
 <br><br>Hierodule is a utility module set for STM32 MCUs.
 <br>Link to detailed documentation: https://ushumgigal.github.io/hierodule
 
