@@ -97,8 +97,21 @@ $(document).ready(function(){initNavTree('_change_log.html',''); initResizable()
 <div class="textblock"><p><a class="anchor" id="md__home_ushumgigal_git_hierodule_CHANGELOG"></a>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="http://keepachangelog.com/">Keep a Changelog</a> and this project adheres to <a href="http://semver.org/">Semantic Versioning</a>.</p>
 <h1><a class="anchor" id="autotoc_md0"></a>
-[1.0.0] - 2024-06-22</h1>
+[1.0.1] - 2024-06-23</h1>
 <h2><a class="anchor" id="autotoc_md1"></a>
+Added</h2>
+<ul>
+<li>Enable check functions for timer interrupts. (timer module)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Fixed</h2>
+<ul>
+<li>Convenient IRQ implementations now use if-else-if conditional statements instead of successive if statements for multiple interrupts. (timer module)</li>
+<li>Convenient IRQ implementations now check if the interrupts are enabled as well, if multiple interrupts are handled in the body. (timer module)</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+[1.0.0] - 2024-06-22</h1>
+<h2><a class="anchor" id="autotoc_md4"></a>
 Added</h2>
 <ul>
 <li>Timer/interrupt utility module for STM32F401xC and STM32F103xB.</li>

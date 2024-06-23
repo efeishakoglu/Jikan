@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('_timer_usage.html',''); initResizable(
 <li>PWM output management.</li>
 <li>Basic interrupt handling and ISR assignment for timers (the latter being optional).</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 PWM</h1>
 <p>You can use the provided PWM routines to</p><ul>
 <li>Toggle counters.</li>
@@ -137,7 +137,7 @@ The module does not address peripheral configuration and initialization, it is a
 All enabler routines cited above are paired with their disabler counterparts. Likewise, "set" functions come with their "get" counterparts.<br  />
  You can define macro constants instead of using mere integers to select output channels if you prefer those to really stand out in the code.<br  />
  Keep in mind that not all timers have same the set of status flags, identical control registers or the same number of output channels. Consult the device manual to verify the peripheral's features.</p>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Timer Interrupts</h1>
 <p>The main goal of this section is to facilitate the assignment of an ISR to an IRQ through a single, straightforward call. <br  />
  The whole process is pretty straightforward, just make sure the IRQs are not defined anywhere else other than the module's source file. <br  />

@@ -26,10 +26,10 @@ var NAVTREE =
 [
   [ "Hierodule", "index.html", [
     [ "Overview", "index.html", [
-      [ "Aim and Scope of the Project", "index.html#autotoc_md2", null ],
-      [ "Compatibility", "index.html#autotoc_md3", null ],
-      [ "Attention", "index.html#autotoc_md4", null ],
-      [ "Contact", "index.html#autotoc_md5", null ]
+      [ "Aim and Scope of the Project", "index.html#autotoc_md5", null ],
+      [ "Compatibility", "index.html#autotoc_md6", null ],
+      [ "Attention", "index.html#autotoc_md7", null ],
+      [ "Contact", "index.html#autotoc_md8", null ]
     ] ],
     [ "Change Log", "_change_log.html", null ],
     [ "License", "_license_m_i_t.html", null ],
