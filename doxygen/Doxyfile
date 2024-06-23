@@ -302,7 +302,8 @@ ALIASES                = "rv_param_timer=@param Timer: Pointer to timer struct."
                          "rv_tim_assign_isr_plain{1}=Assigns a function to the \1 IRQ handler." \
                          "rv_conv_isr_assign_det{1}=Assigns the the ISR to the designated handler for @ref Check_IT \"Check_IT\" to use inside the IRQ if the selected timer indeed has the \1 interrupt flag, branches to @ref InfiniteLoopOfError \"InfiniteLoopOfError\" otherwise." \
                          "rv_irq_imp_bri{1}=\1 IRQ implementation." \
-                         "rv_irq_imp_det=Performs a call to @ref Check_IT \"Check_IT\" for each flag if @ref HIERODULE_TIM_CONVENIENT_IRQ \"HIERODULE_TIM_CONVENIENT_IRQ\" is enabled, uses the plain ISR handler implemented by the user otherwise." \
+                         "rv_irq_imp_det=Performs a call to @ref Check_IT \"Check_IT\" for each flag set with its interrupt enabled if @ref HIERODULE_TIM_CONVENIENT_IRQ \"HIERODULE_TIM_CONVENIENT_IRQ\" is enabled, uses the plain ISR handler implemented by the user otherwise." \
+                         "rv_irq_imp_solo_det{1}=Performs a call to @ref Check_IT \"Check_IT\" for the \1 interrupt if @ref HIERODULE_TIM_CONVENIENT_IRQ \"HIERODULE_TIM_CONVENIENT_IRQ\" is enabled, uses the plain ISR handler implemented by the user otherwise." \
                          "rv_fp_conv_isr{2}=ISR handler for \1 interrupt flag of timer \2" \
                          "rv_fp_plain_isr{1}=Pointer to the \1 IRQ routine."
 

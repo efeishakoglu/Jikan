@@ -298,6 +298,42 @@ void HIERODULE_TIM_Disable_IT_CC4(TIM_TypeDef *Timer);
   */
 void HIERODULE_TIM_Disable_IT_BRK(TIM_TypeDef *Timer);
 
+/** @brief @rv_toggle_tim_it{Checks,update}
+  * @rv_param_timer
+  * @return @rv_bool_ret_en{update interrupt}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_UPD(TIM_TypeDef *Timer);
+
+/** @brief @rv_toggle_tim_it{Checks,capture compare channel 1}
+  * @rv_param_timer
+  * @return @rv_bool_ret_en{capture compare channel 1 interrupt}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_CC1(TIM_TypeDef *Timer);
+
+/** @brief @rv_toggle_tim_it{Checks,capture compare channel 2}
+  * @rv_param_timer
+  * @return @rv_bool_ret_en{capture compare channel 2 interrupt}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_CC2(TIM_TypeDef *Timer);
+
+/** @brief @rv_toggle_tim_it{Checks,capture compare channel 3}
+  * @rv_param_timer
+  * @return @rv_bool_ret_en{capture compare channel 3 interrupt}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_CC3(TIM_TypeDef *Timer);
+
+/** @brief @rv_toggle_tim_it{Checks,capture compare channel 4}
+  * @rv_param_timer
+  * @return @rv_bool_ret_en{capture compare channel 4 interrupt}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_CC4(TIM_TypeDef *Timer);
+
+/** @brief @rv_toggle_tim_it{Checks,break}
+  * @rv_param_timer
+  * @return @rv_bool_ret_en{break interrupt}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_BRK(TIM_TypeDef *Timer);
+
 /** @brief @rv_bdtr_bit_toggle{Sets,automatic output enable}
   * @rv_param_timer
   * @return None

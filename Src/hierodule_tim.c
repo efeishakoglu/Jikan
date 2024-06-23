@@ -817,6 +817,54 @@ void HIERODULE_TIM_Disable_IT_BRK(TIM_TypeDef *Timer)
     CLEAR_BIT(Timer->DIER, TIM_DIER_BIE);
 }
 
+/** @details @rv_bit_is_set_det{UIE}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_UPD(TIM_TypeDef *Timer)
+{
+    return ((READ_BIT(Timer->DIER, TIM_DIER_UIE) == (TIM_DIER_UIE))
+        ? 1UL : 0UL);
+}
+
+/** @details @rv_bit_is_set_det{TIM_DIER_CC1IE}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_CC1(TIM_TypeDef *Timer)
+{
+    return ((READ_BIT(Timer->DIER, TIM_DIER_CC1IE) == (TIM_DIER_CC1IE))
+        ? 1UL : 0UL);
+}
+
+/** @details @rv_bit_is_set_det{TIM_DIER_CC2IE}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_CC2(TIM_TypeDef *Timer)
+{
+    return ((READ_BIT(Timer->DIER, TIM_DIER_CC2IE) == (TIM_DIER_CC2IE))
+        ? 1UL : 0UL);
+}
+
+/** @details @rv_bit_is_set_det{TIM_DIER_CC3IE}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_CC3(TIM_TypeDef *Timer)
+{
+    return ((READ_BIT(Timer->DIER, TIM_DIER_CC3IE) == (TIM_DIER_CC3IE))
+        ? 1UL : 0UL);
+}
+
+/** @details @rv_bit_is_set_det{TIM_DIER_CC4IE}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_CC4(TIM_TypeDef *Timer)
+{
+    return ((READ_BIT(Timer->DIER, TIM_DIER_CC4IE) == (TIM_DIER_CC4IE))
+        ? 1UL : 0UL);
+}
+
+/** @details @rv_bit_is_set_det{TIM_DIER_BIE}
+  */
+uint32_t HIERODULE_TIM_IsEnabled_IT_BRK(TIM_TypeDef *Timer)
+{
+    return ((READ_BIT(Timer->DIER, TIM_DIER_BIE) == (TIM_DIER_BIE))
+        ? 1UL : 0UL);
+}
+
 /** @details @rv_req_xreg{automatic output enable bit in a break and dead time}
   */
 void HIERODULE_TIM_EnableAutomaticOutput(TIM_TypeDef *Timer)
@@ -1137,7 +1185,7 @@ void HIERODULE_TIM_Assign_ISR_BRK(TIM_TypeDef *Timer, FUNC_POINTER ISR)
   * @rv_def_req_device{__STM32F103xB_H}\n
   * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
   * @return None
-  * @details @rv_irq_imp_det
+  * @details @rv_irq_imp_solo_det{update}
   */
 extern void TIM1_UP_IRQHandler(void)
 {
@@ -1162,15 +1210,15 @@ extern void TIM1_UP_TIM10_IRQHandler(void)
 {
     /** \cond */
     #ifdef HIERODULE_TIM_CONVENIENT_IRQ /** \endcond */
-    if(HIERODULE_TIM_IsSetFlag_UPD(TIM1))
+    if(HIERODULE_TIM_IsEnabled_IT_UPD(TIM1) && HIERODULE_TIM_IsSetFlag_UPD(TIM1))
     {
         Check_IT(TIM1, UPD_Handler_TIM1, &HIERODULE_TIM_ClearFlag_UPD);
     }
-    if(HIERODULE_TIM_IsSetFlag_UPD(TIM10))
+    else if(HIERODULE_TIM_IsEnabled_IT_UPD(TIM10) && HIERODULE_TIM_IsSetFlag_UPD(TIM10))
     {
         Check_IT(TIM10, UPD_Handler_TIM10, &HIERODULE_TIM_ClearFlag_UPD);
     }
-    if(HIERODULE_TIM_IsSetFlag_CC1(TIM10))
+    else if(HIERODULE_TIM_IsEnabled_IT_CC1(TIM10) && HIERODULE_TIM_IsSetFlag_CC1(TIM10))
     {
         Check_IT(TIM10, CC1_Handler_TIM10, &HIERODULE_TIM_ClearFlag_CC1);
     }
@@ -1192,19 +1240,19 @@ extern void TIM1_CC_IRQHandler(void)
 {
     /** \cond */
     #ifdef HIERODULE_TIM_CONVENIENT_IRQ /** \endcond */
-        if(HIERODULE_TIM_IsSetFlag_CC1(TIM1))
+        if(HIERODULE_TIM_IsEnabled_IT_CC1(TIM1) && HIERODULE_TIM_IsSetFlag_CC1(TIM1))
         {
             Check_IT(TIM1, CC1_Handler_TIM1, &HIERODULE_TIM_ClearFlag_CC1);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC2(TIM1))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC2(TIM1) && HIERODULE_TIM_IsSetFlag_CC2(TIM1))
         {
             Check_IT(TIM1, CC2_Handler_TIM1, &HIERODULE_TIM_ClearFlag_CC2);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC3(TIM1))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC3(TIM1) && HIERODULE_TIM_IsSetFlag_CC3(TIM1))
         {
             Check_IT(TIM1, CC3_Handler_TIM1, &HIERODULE_TIM_ClearFlag_CC3);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC4(TIM1))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC4(TIM1) && HIERODULE_TIM_IsSetFlag_CC4(TIM1))
         {
             Check_IT(TIM1, CC4_Handler_TIM1, &HIERODULE_TIM_ClearFlag_CC4);
         }
@@ -1221,7 +1269,7 @@ extern void TIM1_CC_IRQHandler(void)
   * @rv_def_req_device{__STM32F103xB_H}\n
   * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
   * @return None
-  * @details @rv_irq_imp_det
+  * @details @rv_irq_imp_solo_det{break}
   */
 extern void TIM1_BRK_IRQHandler(void)
 {
@@ -1246,19 +1294,19 @@ extern void TIM1_BRK_TIM9_IRQHandler(void)
 {
     /** \cond */
     #ifdef HIERODULE_TIM_CONVENIENT_IRQ /** \endcond */
-    if(HIERODULE_TIM_IsSetFlag_BRK(TIM1))
+    if(HIERODULE_TIM_IsEnabled_IT_BRK(TIM1) && HIERODULE_TIM_IsSetFlag_BRK(TIM1))
     {
         Check_IT(TIM1, BRK_Handler_TIM1, &HIERODULE_TIM_ClearFlag_BRK);
     }
-    if(HIERODULE_TIM_IsSetFlag_UPD(TIM9))
+    else if(HIERODULE_TIM_IsEnabled_IT_UPD(TIM9) && HIERODULE_TIM_IsSetFlag_UPD(TIM9))
     {
         Check_IT(TIM9, UPD_Handler_TIM9, &HIERODULE_TIM_ClearFlag_UPD);
     }
-    if(HIERODULE_TIM_IsSetFlag_CC1(TIM9))
+    else if(HIERODULE_TIM_IsEnabled_IT_CC1(TIM9) && HIERODULE_TIM_IsSetFlag_CC1(TIM9))
     {
         Check_IT(TIM9, CC1_Handler_TIM9, &HIERODULE_TIM_ClearFlag_CC1);
     }
-    if(HIERODULE_TIM_IsSetFlag_CC2(TIM9))
+    else if(HIERODULE_TIM_IsEnabled_IT_CC2(TIM9) && HIERODULE_TIM_IsSetFlag_CC2(TIM9))
     {
         Check_IT(TIM9, CC2_Handler_TIM9, &HIERODULE_TIM_ClearFlag_CC2);
     }
@@ -1280,23 +1328,23 @@ extern void TIM2_IRQHandler(void)
 {
     /** \cond */
     #ifdef HIERODULE_TIM_CONVENIENT_IRQ /** \endcond */
-        if(HIERODULE_TIM_IsSetFlag_UPD(TIM2))
+        if(HIERODULE_TIM_IsEnabled_IT_UPD(TIM2) && HIERODULE_TIM_IsSetFlag_UPD(TIM2))
         {
             Check_IT(TIM2, UPD_Handler_TIM2, &HIERODULE_TIM_ClearFlag_UPD);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC1(TIM2))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC1(TIM2) && HIERODULE_TIM_IsSetFlag_CC1(TIM2))
         {
             Check_IT(TIM2, CC1_Handler_TIM2, &HIERODULE_TIM_ClearFlag_CC1);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC2(TIM2))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC2(TIM2) && HIERODULE_TIM_IsSetFlag_CC2(TIM2))
         {
             Check_IT(TIM2, CC2_Handler_TIM2, &HIERODULE_TIM_ClearFlag_CC2);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC3(TIM2))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC3(TIM2) && HIERODULE_TIM_IsSetFlag_CC3(TIM2))
         {
             Check_IT(TIM2, CC3_Handler_TIM2, &HIERODULE_TIM_ClearFlag_CC3);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC4(TIM2))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC4(TIM2) && HIERODULE_TIM_IsSetFlag_CC4(TIM2))
         {
             Check_IT(TIM2, CC4_Handler_TIM2, &HIERODULE_TIM_ClearFlag_CC4);
         }
@@ -1316,23 +1364,23 @@ extern void TIM3_IRQHandler(void)
 {
     /** \cond */
     #ifdef HIERODULE_TIM_CONVENIENT_IRQ /** \endcond */
-        if(HIERODULE_TIM_IsSetFlag_UPD(TIM3))
+        if(HIERODULE_TIM_IsEnabled_IT_UPD(TIM3) && HIERODULE_TIM_IsSetFlag_UPD(TIM3))
         {
             Check_IT(TIM3, UPD_Handler_TIM3, &HIERODULE_TIM_ClearFlag_UPD);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC1(TIM3))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC1(TIM3) && HIERODULE_TIM_IsSetFlag_CC1(TIM3))
         {
             Check_IT(TIM3, CC1_Handler_TIM3, &HIERODULE_TIM_ClearFlag_CC1);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC2(TIM3))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC2(TIM3) && HIERODULE_TIM_IsSetFlag_CC2(TIM3))
         {
             Check_IT(TIM3, CC2_Handler_TIM3, &HIERODULE_TIM_ClearFlag_CC2);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC3(TIM3))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC3(TIM3) && HIERODULE_TIM_IsSetFlag_CC3(TIM3))
         {
             Check_IT(TIM3, CC3_Handler_TIM3, &HIERODULE_TIM_ClearFlag_CC3);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC4(TIM3))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC4(TIM3) && HIERODULE_TIM_IsSetFlag_CC4(TIM3))
         {
             Check_IT(TIM3, CC4_Handler_TIM3, &HIERODULE_TIM_ClearFlag_CC4);
         }
@@ -1352,23 +1400,23 @@ extern void TIM4_IRQHandler(void)
 {
     /** \cond */
     #ifdef HIERODULE_TIM_CONVENIENT_IRQ /** \endcond */
-        if(HIERODULE_TIM_IsSetFlag_UPD(TIM4))
+        if(HIERODULE_TIM_IsEnabled_IT_UPD(TIM4) && HIERODULE_TIM_IsSetFlag_UPD(TIM4))
         {
             Check_IT(TIM4, UPD_Handler_TIM4, &HIERODULE_TIM_ClearFlag_UPD);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC1(TIM4))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC1(TIM4) && HIERODULE_TIM_IsSetFlag_CC1(TIM4))
         {
             Check_IT(TIM4, CC1_Handler_TIM4, &HIERODULE_TIM_ClearFlag_CC1);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC2(TIM4))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC2(TIM4) && HIERODULE_TIM_IsSetFlag_CC2(TIM4))
         {
             Check_IT(TIM4, CC2_Handler_TIM4, &HIERODULE_TIM_ClearFlag_CC2);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC3(TIM4))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC3(TIM4) && HIERODULE_TIM_IsSetFlag_CC3(TIM4))
         {
             Check_IT(TIM4, CC3_Handler_TIM4, &HIERODULE_TIM_ClearFlag_CC3);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC4(TIM4))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC4(TIM4) && HIERODULE_TIM_IsSetFlag_CC4(TIM4))
         {
             Check_IT(TIM4, CC4_Handler_TIM4, &HIERODULE_TIM_ClearFlag_CC4);
         }
@@ -1391,23 +1439,23 @@ extern void TIM5_IRQHandler(void)
 {
     /** \cond */
     #ifdef HIERODULE_TIM_CONVENIENT_IRQ /** \endcond */
-        if(HIERODULE_TIM_IsSetFlag_UPD(TIM5))
+        if(HIERODULE_TIM_IsEnabled_IT_UPD(TIM5) && HIERODULE_TIM_IsSetFlag_UPD(TIM5))
         {
             Check_IT(TIM5, UPD_Handler_TIM5, &HIERODULE_TIM_ClearFlag_UPD);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC1(TIM5))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC1(TIM5) && HIERODULE_TIM_IsSetFlag_CC1(TIM5))
         {
             Check_IT(TIM5, CC1_Handler_TIM5, &HIERODULE_TIM_ClearFlag_CC1);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC2(TIM5))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC2(TIM5) && HIERODULE_TIM_IsSetFlag_CC2(TIM5))
         {
             Check_IT(TIM5, CC2_Handler_TIM5, &HIERODULE_TIM_ClearFlag_CC2);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC3(TIM5))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC3(TIM5) && HIERODULE_TIM_IsSetFlag_CC3(TIM5))
         {
             Check_IT(TIM5, CC3_Handler_TIM5, &HIERODULE_TIM_ClearFlag_CC3);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC4(TIM5))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC4(TIM5) && HIERODULE_TIM_IsSetFlag_CC4(TIM5))
         {
             Check_IT(TIM5, CC4_Handler_TIM5, &HIERODULE_TIM_ClearFlag_CC4);
         }
@@ -1428,11 +1476,11 @@ extern void TIM1_TRG_COM_TIM11_IRQHandler(void)
 {
     /** \cond */
     #ifdef HIERODULE_TIM_CONVENIENT_IRQ /** \endcond */
-        if(HIERODULE_TIM_IsSetFlag_UPD(TIM11))
+        if(HIERODULE_TIM_IsEnabled_IT_UPD(TIM11) && HIERODULE_TIM_IsSetFlag_UPD(TIM11))
         {
             Check_IT(TIM11, UPD_Handler_TIM11, &HIERODULE_TIM_ClearFlag_UPD);
         }
-        if(HIERODULE_TIM_IsSetFlag_CC1(TIM11))
+        else if(HIERODULE_TIM_IsEnabled_IT_CC1(TIM11) && HIERODULE_TIM_IsSetFlag_CC1(TIM11))
         {
             Check_IT(TIM11, CC1_Handler_TIM11, &HIERODULE_TIM_ClearFlag_CC1);
         }
