@@ -30,8 +30,9 @@ extern "C"
   * routines, as well as a void function pointer alias typedef for convenience
   * and a pair of precompiler constants to configure module behaviour.\n
   * Device-specific macro constants and type definitions are imported with an
-  * include directive to main.h, where the device driver headers are
-  * assumed to be included.
+  * include directive to main.h, where the device driver headers are assumed to
+  * be included.\n
+  * Also performed is an include directive to stdlib.h for abs.
   * @{
   */
 
@@ -50,6 +51,7 @@ extern "C"
 #define HIERODULE_TIM_CONVENIENT_IRQ
 
 #include <main.h>
+#include <stdlib.h>
 
 /** @brief Typedef as for an alias for the void function pointer.
   * @details Used for convenience, really. It's used a lot, especially
@@ -108,21 +110,21 @@ uint32_t HIERODULE_TIM_GetRepetition(TIM_TypeDef *Timer);
   * @rv_param_ch_14
   * @return None
   */
-void HIERODULE_TIM_EnableChannel(TIM_TypeDef *Timer, uint8_t Channel);
+void HIERODULE_TIM_EnableChannel(TIM_TypeDef *Timer, int8_t Channel);
 
 /** @brief @rv_triple_action{Disables,PWM output channel of a timer}
   * @rv_param_timer
   * @rv_param_ch_14
   * @return None
   */
-void HIERODULE_TIM_DisableChannel(TIM_TypeDef *Timer, uint8_t Channel);
+void HIERODULE_TIM_DisableChannel(TIM_TypeDef *Timer, int8_t Channel);
 
 /** @brief @rv_triple_action{Checks the status of,PWM output channel of a timer}
   * @rv_param_timer
   * @rv_param_ch_14
   * @return @rv_bool_ret_en{channel}
   */
-uint32_t HIERODULE_TIM_IsEnabledChannel(TIM_TypeDef *Timer, uint8_t Channel);
+uint32_t HIERODULE_TIM_IsEnabledChannel(TIM_TypeDef *Timer, int8_t Channel);
 
 /** @brief @rv_bdtr_bit_toggle{Sets,main output enable}
   * @rv_param_timer
@@ -431,12 +433,17 @@ uint32_t HIERODULE_TIM_IsEnabledCounter(TIM_TypeDef *Timer);
         void HIERODULE_TIM_Assign_TIM1_CC_ISR(FUNC_POINTER ISR);
 
 /** @brief @rv_tim_assign_isr_plain{timer 2}\n
+  * @rv_def_req_device{__STM32F103xB_H or __STM32F401xC_H}\n
   * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
   * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
   * @rv_param_fp_isr
   * @return None
   */
+        /** \cond */
+        #if ( (defined __STM32F103xB_H) || (defined __STM32F401xC_H) ) /** \endcond */
         void HIERODULE_TIM_Assign_TIM2_ISR(FUNC_POINTER ISR);
+        /** \cond */
+        #endif /** \endcond */
 
 /** @brief @rv_tim_assign_isr_plain{timer 3}\n
   * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
@@ -447,12 +454,18 @@ uint32_t HIERODULE_TIM_IsEnabledCounter(TIM_TypeDef *Timer);
         void HIERODULE_TIM_Assign_TIM3_ISR(FUNC_POINTER ISR);
 
 /** @brief @rv_tim_assign_isr_plain{timer 4}\n
+  * @rv_def_req_device{__STM32F103xB_H or __STM32F401xC_H}\n
   * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
   * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
   * @rv_param_fp_isr
   * @return None
   */
+        /** \cond */
+        #if ( (defined __STM32F103xB_H) || (defined __STM32F401xC_H) ) /** \endcond */
         void HIERODULE_TIM_Assign_TIM4_ISR(FUNC_POINTER ISR);
+        /** \cond */
+        #endif /** \endcond */
+
         /** \cond */
         #ifdef __STM32F103xB_H /** \endcond */
 /** @brief @rv_tim_assign_isr_plain{timer 1 update}\n
@@ -509,6 +522,46 @@ uint32_t HIERODULE_TIM_IsEnabledCounter(TIM_TypeDef *Timer);
   * @return None
   */
             void HIERODULE_TIM_Assign_TIM1_TRG_COM_TIM11_ISR(FUNC_POINTER ISR);
+
+        /** \cond */
+        #elif defined __STM32F030x6_H /** \endcond */
+
+/** @brief @rv_tim_assign_isr_plain{timer 1 break - update - trigger comm}\n
+  * @rv_def_req_device{__STM32F030x6_H}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM1_BRK_UP_TRG_COM_ISR(FUNC_POINTER ISR);
+
+/** @brief @rv_tim_assign_isr_plain{timer 14}\n
+  * @rv_def_req_device{__STM32F030x6_H}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM14_ISR(FUNC_POINTER ISR);
+
+/** @brief @rv_tim_assign_isr_plain{timer 16}\n
+  * @rv_def_req_device{__STM32F030x6_H}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM16_ISR(FUNC_POINTER ISR);
+
+/** @brief @rv_tim_assign_isr_plain{timer 17}\n
+  * @rv_def_req_device{__STM32F030x6_H}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM17_ISR(FUNC_POINTER ISR);
+
         /** \cond */
         #endif
     #endif //HIERODULE_TIM_CONVENIENT_IRQ

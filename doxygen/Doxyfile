@@ -38,7 +38,7 @@ PROJECT_NAME           = Hierodule
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = 1.0.0
+PROJECT_NUMBER         = 1.1.0
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
@@ -270,7 +270,7 @@ TAB_SIZE               = 4
 # a double escape (\\{ and \\})
 
 ALIASES                = "rv_param_timer=@param Timer: Pointer to timer struct." \
-                         "rv_param_ch_14=@param Channel: Integer to specify the channel, 1 to 4." \
+                         "rv_param_ch_14=@param Channel: Integer to specify the channel, 1 to 4, negative for complimentary output channels." \
                          "rv_apb_check=Constant to check if non-unitary prescaling has been applied to advanced peripheral bus" \
                          "rv_single_func_convenience=This provides some convenience in that it lets the developer use a single call to manage a PWM output channel with the same function, instead of having different functions for each channel." \
                          "rv_upd_via_psc_arr=This is performed by updating ARR value while keeping PSC constant. PSC value and peripheral bus clock determine the base frequency. See @ref GetBaseFreq \"GetBaseFreq\" for further info." \
@@ -279,7 +279,7 @@ ALIASES                = "rv_param_timer=@param Timer: Pointer to timer struct."
                          "rv_frm_freq=\f$Frequency = Base Frequency / (ARR+1) \f$" \
                          "rv_otf_arr_base_calc{1}=\1 is calculated on the fly using the ARR and base frequency. See @ref GetBaseFreq \"GetBaseFreq\" for further info." \
                          "rv_ccr_bit_action{1}=Fetches the bit mask of the selected channel from the array @ref TimerChannel_EN \"TimerChannel_EN\" and uses that to \1 the designated CCER register bit." \
-                         "rv_ch_14_avoid_fail=Channel parameter is ensured to be an integer value between 1 and 4 beforehand to avoid failure." \
+                         "rv_ch_14_avoid_fail=Channel parameter is ensured to be a valid integer value beforehand to avoid failure." \
                          "rv_ch_ret_min_1_on_fail=In case of an invalid input, -1.0 is returned." \
                          "rv_req_xreg{1}=Note that this will only work if the timer has the \1 register." \
                          "rv_bdtr_bit_toggle{2}=\1 the \2 bit in the break and dead time register of the timer." \
@@ -982,7 +982,7 @@ EXCLUDE_SYMBOLS        =
 # that contain example code fragments that are included (see the \include
 # command).
 
-EXAMPLE_PATH           =
+EXAMPLE_PATH           = ../LICENSE.md
 
 # If the value of the EXAMPLE_PATH tag contains directories, you can use the
 # EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp and

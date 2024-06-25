@@ -19,7 +19,7 @@ Aim and Scope of the Project
 |:-----------:|:------:|:-------:|:-----:|:-----:|:-----:|:----------:|:-----:|
 | STM32F103xB | ≥1.0.0 |   WIP   |  TBA  |  TBA  |  TBA  |    TBA     |  TBA  |
 | STM32F401xC | ≥1.0.0 |   WIP   |  TBA  |  TBA  |  TBA  |    TBA     |  TBA  |
-| STM32F030x6 |  WIP   |   WIP   |  TBA  |  TBA  |  TBA  |    TBA     |  TBA  |
+| STM32F030x6 | ≥1.1.0 |   WIP   |  TBA  |  TBA  |  TBA  |    TBA     |  TBA  |
 
 Compatibility
 =============

@@ -1,6 +1,3 @@
-License {#LicenseMIT}
-=====================
-
 MIT License
 
 Copyright (c) 2024 [ushumgigal](https://github.com/ushumgigal)

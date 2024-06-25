@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.0] - 2024-06-25
+
+### Added
+
+- STM32F030x6 support for timer module
+
+### Changed
+
+- Device specific PCC checks updated, taking STM32F030x6 in account. (timer module)
+- Complimentary PWM output channels can be toggled and checked now. (timer module)
+
 ## [1.0.1] - 2024-06-23
 
 ### Added
