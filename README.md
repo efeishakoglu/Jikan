@@ -17,9 +17,9 @@ Aim and Scope of the Project
 
 |             |  Timer |  USART  |  ADC  |  I2C  |  SPI  |  FREERTOS  |  USB  |
 |:-----------:|:------:|:-------:|:-----:|:-----:|:-----:|:----------:|:-----:|
-| STM32F103xB | ≥1.0.0 |   WIP   |  TBA  |  TBA  |  TBA  |    TBA     |  TBA  |
-| STM32F401xC | ≥1.0.0 |   WIP   |  TBA  |  TBA  |  TBA  |    TBA     |  TBA  |
-| STM32F030x6 | ≥1.1.0 |   WIP   |  TBA  |  TBA  |  TBA  |    TBA     |  TBA  |
+| STM32F103xB | ≥1.0.0 |  ≥1.2.0 |  WIP  |  TBA  |  TBA  |    TBA     |  TBA  |
+| STM32F401xC | ≥1.0.0 |  ≥1.2.0 |  WIP  |  TBA  |  TBA  |    TBA     |  TBA  |
+| STM32F030x6 | ≥1.1.0 |  ≥1.2.0 |  WIP  |  TBA  |  TBA  |    TBA     |  TBA  |
 
 Compatibility
 =============

@@ -7,6 +7,7 @@
     <tab type="user" visible="yes" title="License" url="@ref LicenseMIT"/>
     <tab type="usergroup" visible="yes" title="Usage">
         <tab type="user" visible="yes" title="Timer" url="@ref TimerUsage"/>
+        <tab type="user" visible="yes" title="USART" url="@ref USART_Usage"/>
     </tab>
     <tab type="modules" visible="yes" title="Reference Manual" intro=""/>
     <tab type="filelist" visible="yes" title="Files" intro=""/>

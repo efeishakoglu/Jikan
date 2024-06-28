@@ -16,7 +16,7 @@ You can use the provided PWM routines to
 - Set the duty cycle of a channel.
 - Clear the counter of a timer.
 
-<br>The module does not address peripheral configuration and initialization, it is assumed those are performed beforehand. Also, it's best to set a proper prescaler value for the timer you're going to work with, since frequency and period changes are performed by updating the ARR value in relation to the peripheral bus clock and PSC.<br>
+<br>@rv_module_no_init Also, it's best to set a proper prescaler value for the timer you're going to work with, since frequency and period changes are performed by updating the ARR value in relation to the peripheral bus clock and PSC.<br>
 
 Here's the basic use of PWM related routines:
 ```c

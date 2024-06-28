@@ -27,6 +27,7 @@ var menudata={children:[
 {text:"Change Log",url:"_change_log.html"},
 {text:"License",url:"_license_m_i_t.html"},
 {text:"Usage",url:"usergroup0.html",children:[
-{text:"Timer",url:"_timer_usage.html"}]},
+{text:"Timer",url:"_timer_usage.html"},
+{text:"USART",url:"_u_s_a_r_t__usage.html"}]},
 {text:"Reference Manual",url:"modules.html"},
 {text:"Files",url:"files.html"}]}

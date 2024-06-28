@@ -16,14 +16,11 @@
   */
 
 /** @addtogroup TIM_Private Static
-  * @brief Elements of the module that are confined to the scope of the
-  * compilation unit. Perfectly corresponds to the module's source file, except
-  * the IRQ handlers.
+  * @brief @rv_global_private_brief{are} @rv_corresponds_exc_irqs{source}
   * @details Consists of definitions for routines declared in the header
   * file, as well as typedefs, variables and routines that are used to
   * implement those.\n
-  * IRQ definitions with custom ISR implementations are also included at the
-  * end of the file.
+  * @rv_irq_defs_eof
   * @{
   */
 
@@ -1907,7 +1904,8 @@ extern void TIM17_IRQHandler(void)
 }
 
 /** \cond */
-#endif /** \endcond */
+#endif
+#endif  /** \endcond */
 
 /**
   * @}
@@ -1916,5 +1914,4 @@ extern void TIM17_IRQHandler(void)
   * @}
   */
 
-#endif // HIERODULE_TIM_HANDLE_IRQ
 

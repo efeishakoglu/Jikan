@@ -38,7 +38,7 @@ PROJECT_NAME           = Hierodule
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = 1.1.0
+PROJECT_NUMBER         = 1.2.0
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
@@ -284,10 +284,10 @@ ALIASES                = "rv_param_timer=@param Timer: Pointer to timer struct."
                          "rv_req_xreg{1}=Note that this will only work if the timer has the \1 register." \
                          "rv_bdtr_bit_toggle{2}=\1 the \2 bit in the break and dead time register of the timer." \
                          "rv_tim_ch_acq=the pointer to which is acquired with a call to @ref ChannelSelector \"ChannelSelector\" with the timer struct pointer and the corresponding element of the CCR variable offset array @ref TimerChannel_CCR \"TimerChannel_CCR\"." \
-                         "rv_action_tim_it_flag{2}=\1 the \2 interrupt flag of a timer." \
+                         "rv_action_periph_it_flag{3}=\1 the \2 interrupt flag of the \3." \
                          "rv_clear_tim_it_flag_det{1}=\1 interrupt flag is cleared software-wise with the logical NOT of the flag's timer status register bitmask." \
-                         "rv_tim_it_ret=1 if the interrupt flag is set. Returns 0 otherwise." \
-                         "rv_toggle_tim_it{2}=\1 the \2 interrupt of a timer." \
+                         "rv_periph_it_ret=1 if the interrupt flag is set. Returns 0 otherwise." \
+                         "rv_toggle_periph_it{3}=\1 the \2 interrupt of \3." \
                          "rv_tim_it_enable_det{1}=The enable bit in the timer control register is set after clearing the \1 interrupt flag." \
                          "rv_tim_it_disable_det{1}=The \1 interrupt is disabled by clearing the enable bit in the timer control register." \
                          "rv_triple_action{2}=\1 the \2." \
@@ -305,7 +305,17 @@ ALIASES                = "rv_param_timer=@param Timer: Pointer to timer struct."
                          "rv_irq_imp_det=Performs a call to @ref Check_IT \"Check_IT\" for each flag set with its interrupt enabled if @ref HIERODULE_TIM_CONVENIENT_IRQ \"HIERODULE_TIM_CONVENIENT_IRQ\" is enabled, uses the plain ISR handler implemented by the user otherwise." \
                          "rv_irq_imp_solo_det{1}=Performs a call to @ref Check_IT \"Check_IT\" for the \1 interrupt if @ref HIERODULE_TIM_CONVENIENT_IRQ \"HIERODULE_TIM_CONVENIENT_IRQ\" is enabled, uses the plain ISR handler implemented by the user otherwise." \
                          "rv_fp_conv_isr{2}=ISR handler for \1 interrupt flag of timer \2" \
-                         "rv_fp_plain_isr{1}=Pointer to the \1 IRQ routine."
+                         "rv_fp_plain_isr{1}=Pointer to the \1 IRQ routine." \
+                         "rv_refer_to_usage{1}=Refer to the @ref \1 \"Usage\" page for directives." \
+                         "rv_global_private_brief{1}=Elements of the module that \1 confined to the scope of the compilation unit." \
+                         "rv_corresponds_exc_irqs{1}=Perfectly corresponds to the module's \1 file, except the IRQ handlers." \
+                         "rv_irq_defs_eof=IRQ definitions with custom ISR implementations are also included at the end of the file." \
+                         "rv_inc_main=Device-specific macro constants and type definitions are imported with an include directive to main.h, where the device driver headers are assumed to be included." \
+                         "rv_inc_headers{2}=\1 also included for \2." \
+                         "rv_usart_wrap_field=This field is meant to be set via @ref HIERODULE_USART_InitWrapper \"HIERODULE_USART_InitWrapper\", changing it manually may result in unexpected behavior." \
+                         "rv_usart_wrapper_ptr=@param Wrapper Pointer to the USART wrapper." \
+                         "rv_bit_assumption_usart{1}=\1 flag in the USART control register is assumed to be already set." \
+                         "rv_module_no_init=The module does not address peripheral configuration and initialization, it is assumed those are performed beforehand."
 
 # Set the OPTIMIZE_OUTPUT_FOR_C tag to YES if your project consists of C sources
 # only. Doxygen will then generate output that is more tailored for C. For

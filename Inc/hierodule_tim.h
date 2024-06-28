@@ -19,20 +19,16 @@ extern "C"
 
 /** @addtogroup Hierodule_Tim Timer Module
   * @brief PWM output & timer interrupt management
-  * @details Refer to the @ref TimerUsage "Usage" page for directives.
+  * @details @rv_refer_to_usage{TimerUsage}
   * @{
   */
 /** @addtogroup TIM_Public Global
-  * @brief Elements of the module that are not confined to the scope of the
-  * compilation unit. Perfectly corresponds to the module's header file, except
-  * the IRQ handlers.
+  * @brief @rv_global_private_brief{are not} @rv_corresponds_exc_irqs{header}
   * @details Consists of PWM output management and Timer interrupt handling
   * routines, as well as a void function pointer alias typedef for convenience
   * and a pair of precompiler constants to configure module behaviour.\n
-  * Device-specific macro constants and type definitions are imported with an
-  * include directive to main.h, where the device driver headers are assumed to
-  * be included.\n
-  * Also performed is an include directive to stdlib.h for abs.
+  * @rv_inc_main\n
+  * @rv_inc_headers{stdlib.h,abs}
   * @{
   */
 
@@ -156,181 +152,181 @@ void HIERODULE_TIM_SetDutyCycle(TIM_TypeDef *Timer, uint8_t Channel,
   */
 double HIERODULE_TIM_GetDutyCycle(TIM_TypeDef *Timer, uint8_t Channel);
 
-/** @brief @rv_action_tim_it_flag{Clears, update}
+/** @brief @rv_action_periph_it_flag{Clears, update, timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_ClearFlag_UPD(TIM_TypeDef *Timer);
 
-/** @brief @rv_action_tim_it_flag{Clears, capture compare channel 1}
+/** @brief @rv_action_periph_it_flag{Clears, capture compare channel 1, timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_ClearFlag_CC1(TIM_TypeDef *Timer);
 
-/** @brief @rv_action_tim_it_flag{Clears, capture compare channel 2}
+/** @brief @rv_action_periph_it_flag{Clears, capture compare channel 2, timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_ClearFlag_CC2(TIM_TypeDef *Timer);
 
-/** @brief @rv_action_tim_it_flag{Clears, capture compare channel 3}
+/** @brief @rv_action_periph_it_flag{Clears, capture compare channel 3, timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_ClearFlag_CC3(TIM_TypeDef *Timer);
 
-/** @brief @rv_action_tim_it_flag{Clears, capture compare channel 4}
+/** @brief @rv_action_periph_it_flag{Clears, capture compare channel 4, timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_ClearFlag_CC4(TIM_TypeDef *Timer);
 
-/** @brief @rv_action_tim_it_flag{Clears, break}
+/** @brief @rv_action_periph_it_flag{Clears, break, timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_ClearFlag_BRK(TIM_TypeDef *Timer);
 
-/** @brief @rv_action_tim_it_flag{Checks the status of, update}
+/** @brief @rv_action_periph_it_flag{Checks the status of, update, timer}
   * @rv_param_timer
-  * @return @rv_tim_it_ret
+  * @return @rv_periph_it_ret
   */
 uint32_t HIERODULE_TIM_IsSetFlag_UPD(TIM_TypeDef *Timer);
 
-/** @brief @rv_action_tim_it_flag{Checks the status of, capture compare channel 1}
+/** @brief @rv_action_periph_it_flag{Checks the status of, capture compare channel 1, timer}
   * @rv_param_timer
-  * @return @rv_tim_it_ret
+  * @return @rv_periph_it_ret
   */
 uint32_t HIERODULE_TIM_IsSetFlag_CC1(TIM_TypeDef *Timer);
 
-/** @brief @rv_action_tim_it_flag{Checks the status of, capture compare channel 2}
+/** @brief @rv_action_periph_it_flag{Checks the status of, capture compare channel 2, timer}
   * @rv_param_timer
-  * @return @rv_tim_it_ret
+  * @return @rv_periph_it_ret
   */
 uint32_t HIERODULE_TIM_IsSetFlag_CC2(TIM_TypeDef *Timer);
 
-/** @brief @rv_action_tim_it_flag{Checks the status of, capture compare channel 3}
+/** @brief @rv_action_periph_it_flag{Checks the status of, capture compare channel 3, timer}
   * @rv_param_timer
-  * @return @rv_tim_it_ret
+  * @return @rv_periph_it_ret
   */
 uint32_t HIERODULE_TIM_IsSetFlag_CC3(TIM_TypeDef *Timer);
 
-/** @brief @rv_action_tim_it_flag{Checks the status of, capture compare channel 4}
+/** @brief @rv_action_periph_it_flag{Checks the status of, capture compare channel 4, timer}
   * @rv_param_timer
-  * @return @rv_tim_it_ret
+  * @return @rv_periph_it_ret
   */
 uint32_t HIERODULE_TIM_IsSetFlag_CC4(TIM_TypeDef *Timer);
 
-/** @brief @rv_action_tim_it_flag{Checks the status of, break}
+/** @brief @rv_action_periph_it_flag{Checks the status of, break, timer}
   * @rv_param_timer
-  * @return @rv_tim_it_ret
+  * @return @rv_periph_it_ret
   */
 uint32_t HIERODULE_TIM_IsSetFlag_BRK(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Enables,update}
+/** @brief @rv_toggle_periph_it{Enables,update, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Enable_IT_UPD(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Enables,capture compare channel 1}
+/** @brief @rv_toggle_periph_it{Enables,capture compare channel 1, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Enable_IT_CC1(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Enables,capture compare channel 2}
+/** @brief @rv_toggle_periph_it{Enables,capture compare channel 2, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Enable_IT_CC2(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Enables,capture compare channel 3}
+/** @brief @rv_toggle_periph_it{Enables,capture compare channel 3, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Enable_IT_CC3(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Enables,capture compare channel 4}
+/** @brief @rv_toggle_periph_it{Enables,capture compare channel 4, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Enable_IT_CC4(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Enables,break}
+/** @brief @rv_toggle_periph_it{Enables,break, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Enable_IT_BRK(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Disables,update}
+/** @brief @rv_toggle_periph_it{Disables,update, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Disable_IT_UPD(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Disables,capture compare channel 1}
+/** @brief @rv_toggle_periph_it{Disables,capture compare channel 1, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Disable_IT_CC1(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Disables,capture compare channel 2}
+/** @brief @rv_toggle_periph_it{Disables,capture compare channel 2, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Disable_IT_CC2(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Disables,capture compare channel 3}
+/** @brief @rv_toggle_periph_it{Disables,capture compare channel 3, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Disable_IT_CC3(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Disables,capture compare channel 4}
+/** @brief @rv_toggle_periph_it{Disables,capture compare channel 4, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Disable_IT_CC4(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Disables,break}
+/** @brief @rv_toggle_periph_it{Disables,break, the timer}
   * @rv_param_timer
   * @return None
   */
 void HIERODULE_TIM_Disable_IT_BRK(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Checks,update}
+/** @brief @rv_toggle_periph_it{Checks,update, the timer}
   * @rv_param_timer
   * @return @rv_bool_ret_en{update interrupt}
   */
 uint32_t HIERODULE_TIM_IsEnabled_IT_UPD(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Checks,capture compare channel 1}
+/** @brief @rv_toggle_periph_it{Checks,capture compare channel 1, the timer}
   * @rv_param_timer
   * @return @rv_bool_ret_en{capture compare channel 1 interrupt}
   */
 uint32_t HIERODULE_TIM_IsEnabled_IT_CC1(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Checks,capture compare channel 2}
+/** @brief @rv_toggle_periph_it{Checks,capture compare channel 2, the timer}
   * @rv_param_timer
   * @return @rv_bool_ret_en{capture compare channel 2 interrupt}
   */
 uint32_t HIERODULE_TIM_IsEnabled_IT_CC2(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Checks,capture compare channel 3}
+/** @brief @rv_toggle_periph_it{Checks,capture compare channel 3, the timer}
   * @rv_param_timer
   * @return @rv_bool_ret_en{capture compare channel 3 interrupt}
   */
 uint32_t HIERODULE_TIM_IsEnabled_IT_CC3(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Checks,capture compare channel 4}
+/** @brief @rv_toggle_periph_it{Checks,capture compare channel 4, the timer}
   * @rv_param_timer
   * @return @rv_bool_ret_en{capture compare channel 4 interrupt}
   */
 uint32_t HIERODULE_TIM_IsEnabled_IT_CC4(TIM_TypeDef *Timer);
 
-/** @brief @rv_toggle_tim_it{Checks,break}
+/** @brief @rv_toggle_periph_it{Checks,break, the timer}
   * @rv_param_timer
   * @return @rv_bool_ret_en{break interrupt}
   */
