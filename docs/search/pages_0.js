@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['change_20log_382',['Change Log',['../_change_log.html',1,'']]]
+  ['adc_20module_421',['ADC Module',['../_a_d_c__usage.html',1,'']]]
 ];

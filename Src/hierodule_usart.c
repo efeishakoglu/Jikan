@@ -17,23 +17,21 @@
 
 /** @addtogroup USART_Private Static
   * @brief @rv_global_private_brief{are} @rv_corresponds_exc_irqs{source}
-  * @details Implements the routines defined in the header file and routines
-  * necessary for those in the background. Pointers of USART wrappers are also
-  * defined here.\n
+  * @details @rv_static_wrap_det{USART}\n
   * @rv_irq_defs_eof
   * @{
   */
 
 /** @brief USART wrapper pointer meant for USART1.
   */
-HIERODULE_USART_Wrapper *USART1_Wrapper = NULL;
+static HIERODULE_USART_Wrapper *USART1_Wrapper = NULL;
 
 /** @brief USART wrapper pointer meant for USART2.\n
   * @rv_def_req_device{__STM32F103xB_H or __STM32F401xC_H}
   */
 /** \cond */
 #if ( (defined __STM32F103xB_H) || (defined __STM32F401xC_H) ) /** \endcond */
-HIERODULE_USART_Wrapper *USART2_Wrapper = NULL;
+static HIERODULE_USART_Wrapper *USART2_Wrapper = NULL;
 /** \cond */
 #endif /** \endcond */
 
@@ -42,7 +40,7 @@ HIERODULE_USART_Wrapper *USART2_Wrapper = NULL;
   */
 /** \cond */
 #ifdef __STM32F103xB_H /** \endcond */
-HIERODULE_USART_Wrapper *USART3_Wrapper = NULL;
+static HIERODULE_USART_Wrapper *USART3_Wrapper = NULL;
 /** \cond */
 #endif /** \endcond */
 
@@ -51,15 +49,14 @@ HIERODULE_USART_Wrapper *USART3_Wrapper = NULL;
   */
 /** \cond */
 #ifdef __STM32F401xC_H /** \endcond */
-HIERODULE_USART_Wrapper *USART6_Wrapper = NULL;
+static HIERODULE_USART_Wrapper *USART6_Wrapper = NULL;
 /** \cond */
 #endif /** \endcond */
 
 /** @brief Reads and returns a single byte received by the USART peripheral.
-  * @rv_usart_wrapper_ptr
+  * @rv_param_wrapper_ptr{USART}
   * @return Byte read from RDR.
-  * @details Meant to be used in IRQ bodies and not for custom implementations,
-  * hence the reason it's static.
+  * @details @rv_static_for_irq
   */
 uint8_t ReceiveByte(HIERODULE_USART_Wrapper *Wrapper)
 {
@@ -81,15 +78,11 @@ uint8_t ReceiveByte(HIERODULE_USART_Wrapper *Wrapper)
   * @{
   */
 
-/** @details The ring buffer and the wrapper pointer itself get new addresses
-  * allocated, to be freed at some future point via @ref
-  * HIERODULE_USART_ReleaseWrapper "HIERODULE_USART_ReleaseWrapper", hence the
-  * reason a pointer is used for the wrapper; likewise, a double pointer is
-  * used to return it by reference.\n
+/** @details The ring buffer gets a new address allocated to it.\n
   * The ring buffer is filled with null characters.\n
   * Disables the RE bit of the control register, as well as the RXNE flag in
   * the status register.\n
-  * Device specific checks are performed for the USART peripheral specified.
+  * @rv_wrapper_future_release{USART,HIERODULE_USART_ReleaseWrapper}
   */
 HIERODULE_USART_Wrapper **HIERODULE_USART_InitWrapper
 (
@@ -166,9 +159,7 @@ HIERODULE_USART_Wrapper **HIERODULE_USART_InitWrapper
 }
 
 /** @details Ring buffer address is also freed.\n
-  * Using a released USART wrapper or its fields may result in unexpected behavior.\n
-  * Keep in mind this clears up the USART wrapper pointer in this file scope; it is
-  * recommended to free your double pointer to the wrapper, likewise.
+  * @rv_wrapper_warn_release_det{USART}
   */
 void HIERODULE_USART_ReleaseWrapper(HIERODULE_USART_Wrapper *Wrapper)
 {
@@ -311,7 +302,7 @@ void HIERODULE_USART_TransmitString(HIERODULE_USART_Wrapper *Wrapper, char *Stri
   */
 
 /** @brief The base IRQ body to be used for all USART IRQs.
-  * @rv_usart_wrapper_ptr
+  * @rv_param_wrapper_ptr{USART}
   * @return None
   * @details Byte received in the RDR is not handled if the ISR has not been
   * assigned.\n

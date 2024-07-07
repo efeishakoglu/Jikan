@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usart_20module_381',['USART Module',['../group___hierodule___usart.html',1,'']]]
+  ['timer_20module_419',['Timer Module',['../group___hierodule___tim.html',1,'']]]
 ];

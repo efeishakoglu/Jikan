@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['changelog_2emd_195',['CHANGELOG.md',['../_c_h_a_n_g_e_l_o_g_8md.html',1,'']]]
+  ['adc_5fusage_2emd_216',['ADC_USAGE.md',['../_a_d_c___u_s_a_g_e_8md.html',1,'']]]
 ];

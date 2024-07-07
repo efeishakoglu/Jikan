@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mit_5flicense_2emd_201',['MIT_LICENSE.md',['../_m_i_t___l_i_c_e_n_s_e_8md.html',1,'']]]
+  ['license_2emd_224',['LICENSE.md',['../_l_i_c_e_n_s_e_8md.html',1,'']]]
 ];

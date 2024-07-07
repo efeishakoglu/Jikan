@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.3.0] - 2024-07-07
+
+### Added
+
+- ADC module for devices STM32F030x6, STM32F103xB, STM32F401xC.
+
+### Fixed
+
+- USART Wrappers are now declared as static.
+
 ## [1.2.0] - 2024-06-28
 
 ### Added

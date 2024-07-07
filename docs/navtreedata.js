@@ -26,16 +26,17 @@ var NAVTREE =
 [
   [ "Hierodule", "index.html", [
     [ "Overview", "index.html", [
-      [ "Aim and Scope of the Project", "index.html#autotoc_md10", null ],
-      [ "Compatibility", "index.html#autotoc_md11", null ],
-      [ "Attention", "index.html#autotoc_md12", null ],
-      [ "Contact", "index.html#autotoc_md13", null ]
+      [ "Aim and Scope of the Project", "index.html#autotoc_md13", null ],
+      [ "Compatibility", "index.html#autotoc_md14", null ],
+      [ "Attention", "index.html#autotoc_md15", null ],
+      [ "Contact", "index.html#autotoc_md16", null ]
     ] ],
     [ "Change Log", "_change_log.html", null ],
     [ "License", "_license_m_i_t.html", null ],
     [ "Usage", "usergroup0.html", [
       [ "Timer", "_timer_usage.html", null ],
-      [ "USART", "_u_s_a_r_t__usage.html", null ]
+      [ "USART", "_u_s_a_r_t__usage.html", null ],
+      [ "ADC", "_a_d_c__usage.html", null ]
     ] ],
     [ "Reference Manual", "modules.html", "modules" ],
     [ "Files", "files.html", "files" ]
@@ -44,8 +45,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_change_log.html",
-"group___t_i_m___public.html#ga825db81aacd416c360d92d46f6f336d4"
+"_a_d_c__usage.html",
+"group___t_i_m___public.html#ga5c158b9331b5918268dc5d48c6efa409"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -51,7 +51,7 @@ Keep in mind that not all timers have same the set of status flags, identical co
 ##Timer Interrupts
 
 The main goal of this section is to facilitate the assignment of an ISR to an IRQ through a single, straightforward call.
-<br> The whole process is pretty straightforward, just make sure the IRQs are not defined anywhere else other than the module's source file.
+<br> @rv_usage_irq{Timer}
 <br> Here's the code to basically bind "Some_ISR_Function" to the counter update interrupt request of TIM1 and enable the interrupt:
 ```c
 void Some_ISR_Function(void);

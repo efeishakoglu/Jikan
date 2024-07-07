@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['infiniteloopoferror_124',['InfiniteLoopOfError',['../group___t_i_m___private.html#ga0455e06c4f80ae75a68b9ce1ec1bdd7d',1,'hierodule_tim.c']]]
+  ['getbasefreq_48',['GetBaseFreq',['../group___t_i_m___private.html#gac7642937b574a36b1c269d7aa7e03d8f',1,'hierodule_tim.c']]],
+  ['global_49',['Global',['../group___a_d_c___public.html',1,'(Global Namespace)'],['../group___t_i_m___public.html',1,'(Global Namespace)'],['../group___u_s_a_r_t___public.html',1,'(Global Namespace)']]]
 ];

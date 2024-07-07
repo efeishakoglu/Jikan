@@ -38,7 +38,7 @@ PROJECT_NAME           = Hierodule
 # could be handy for archiving the generated documentation or if some version
 # control system is used.
 
-PROJECT_NUMBER         = 1.2.0
+PROJECT_NUMBER         = 1.3.0
 
 # Using the PROJECT_BRIEF tag one can provide an optional one line description
 # for a project that appears at the top of each page and should give viewer a
@@ -312,10 +312,24 @@ ALIASES                = "rv_param_timer=@param Timer: Pointer to timer struct."
                          "rv_irq_defs_eof=IRQ definitions with custom ISR implementations are also included at the end of the file." \
                          "rv_inc_main=Device-specific macro constants and type definitions are imported with an include directive to main.h, where the device driver headers are assumed to be included." \
                          "rv_inc_headers{2}=\1 also included for \2." \
-                         "rv_usart_wrap_field=This field is meant to be set via @ref HIERODULE_USART_InitWrapper \"HIERODULE_USART_InitWrapper\", changing it manually may result in unexpected behavior." \
-                         "rv_usart_wrapper_ptr=@param Wrapper Pointer to the USART wrapper." \
+                         "rv_common_wrap_field{1}=This field is meant to be set via @ref \1 \"\1\", changing it manually may result in unexpected behavior." \
+                         "rv_param_wrapper_ptr{1}=@param Wrapper Pointer to the \1 wrapper." \
                          "rv_bit_assumption_usart{1}=\1 flag in the USART control register is assumed to be already set." \
-                         "rv_module_no_init=The module does not address peripheral configuration and initialization, it is assumed those are performed beforehand."
+                         "rv_module_no_init=The module does not address peripheral configuration and initialization, it is assumed those are performed beforehand." \
+                         "rv_static_wrap_det{1}=Implements the routines defined in the header file and routines necessary for those in the background. Pointers of \1 wrappers are also defined here." \
+                         "rv_wrapper_brief{3}=Struct that keeps variables for the \1, a pointer to the \2 peripheral and a pointer to the ISR for \3." \
+                         "rv_wrapper_det=Used by all routines in the module.\n Alias typedefs for custom pointers are not defined, since they're not used excessively in the module." \
+                         "rv_wrapper_isr_det{1}=Notice this points to a function with a \1 parameter, ergo the ISR assigned must be declared accordingly, even if it won't use the received byte in its definition." \
+                         "rv_static_for_irq=Meant to be used in IRQ bodies and not for custom implementations, hence the reason it's static." \
+                         "rv_init_wrapper_brief_param{2}=@brief Initializes a wrapper for the specified \1 peripheral. @param \2 \1 peripheral of the wrapper." \
+                         "rv_init_wrapper_ret=Double pointer to the initialized wrapper." \
+                         "rv_wrapper_future_release{2}=The wrapper pointer gets a new address allocated, to be freed at some future point via @ref \2 \"\2\", hence the reason a pointer is used for the wrapper; likewise, a double pointer is used to return it by reference.\n Device specific checks are performed for the \1 peripheral specified." \
+                         "rv_wrapper_warn_release_det{1}=Using a released \1 wrapper or its fields may result in unexpected behavior.\n Keep in mind this clears up the \1 wrapper pointer in this file scope; it is recommended to free your double pointer to the wrapper, likewise." \
+                         "rv_adc_irq_handler_det=If the wrapper to an ADC peripheral is allocated and flag checks are true, data holder in the assigned wrapper gets updated. If the wrapper has an ISR assigned, that is also invoked.\n Notice the filter is optional." \
+                         "rv_usage_irq{1}=Also notice that the \1 IRQs are defined in the module's source file. The compiler will throw a multiple definition error if an IRQ is defined somewhere else." \
+                         "rv_usage_wrapper_double_ptr{1}=It has to be a double pointer, since the wrapper initializer passes you the wrapper pointer defined in the module by reference. The wrapper instance is handled in the module with a pointer and not with a variable of type @ref \1 \"\1\", since you use pointers for dynamic memory allocation." \
+                         "rv_usage_wrapper_isr{2}=Secondly, you need a void function with a \1 parameter for the \2 ISR. You might as well just pass NULL if you intend to use the received data somewhere else. Or you can even maintain an array for the function pointers (i.e. void (\*)(\1)) to switch between ISRs on the fly." \
+                         "rv_usage_wrapper_release{2}=You can \"release\" the instance of your wrapper to free memory: @code{c} HIERODULE_\1_ReleaseWrapper(*\2); @endcode Keep in mind this only frees the wrapper pointer in the module and not your double pointer that points to it. It's best to free and nullify that, as well: @code{c} free(\2); @endcode @code{c}\2 = NULL; @endcode Notice that trying to access a freed memory address might turn out ugly for your run-time. However, you can reuse your double pointer to re-initialize the \1 peripheral after releasing it."
 
 # Set the OPTIMIZE_OUTPUT_FOR_C tag to YES if your project consists of C sources
 # only. Doxygen will then generate output that is more tailored for C. For

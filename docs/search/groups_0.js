@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['global_378',['Global',['../group___t_i_m___public.html',1,'(Global Namespace)'],['../group___u_s_a_r_t___public.html',1,'(Global Namespace)']]]
+  ['adc_20module_416',['ADC Module',['../group___hierodule___a_d_c.html',1,'']]]
 ];
