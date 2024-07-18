@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usart_20module_427',['USART Module',['../_u_s_a_r_t__usage.html',1,'']]]
+  ['timer_20module_553',['Timer Module',['../_timer_usage.html',1,'']]]
 ];

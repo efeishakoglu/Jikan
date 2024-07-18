@@ -1,19 +1,11 @@
 var searchData=
 [
-  ['tim14_5fisr_382',['TIM14_ISR',['../group___t_i_m___private.html#gad401087d16753c795fc4709f6ffacd80',1,'hierodule_tim.c']]],
-  ['tim16_5fisr_383',['TIM16_ISR',['../group___t_i_m___private.html#ga271a89948ec569e73efb7f364f6928de',1,'hierodule_tim.c']]],
-  ['tim17_5fisr_384',['TIM17_ISR',['../group___t_i_m___private.html#ga70aa10037a719147b3973859877d8d8a',1,'hierodule_tim.c']]],
-  ['tim1_5fbrk_5fisr_385',['TIM1_BRK_ISR',['../group___t_i_m___private.html#ga9b02d4e15ab64687bb38b926f0160d49',1,'hierodule_tim.c']]],
-  ['tim1_5fbrk_5ftim9_5fisr_386',['TIM1_BRK_TIM9_ISR',['../group___t_i_m___private.html#ga5649cc845bc213c249dec3b1a185c1a6',1,'hierodule_tim.c']]],
-  ['tim1_5fbrk_5fup_5ftrg_5fcom_5fisr_387',['TIM1_BRK_UP_TRG_COM_ISR',['../group___t_i_m___private.html#ga61c74b79a0689a18b086782b496e9362',1,'hierodule_tim.c']]],
-  ['tim1_5fcc_5fisr_388',['TIM1_CC_ISR',['../group___t_i_m___private.html#gaa30182a3c9cb0fe7f9f9ccde15d4bde1',1,'hierodule_tim.c']]],
-  ['tim1_5ftrg_5fcom_5ftim11_5fisr_389',['TIM1_TRG_COM_TIM11_ISR',['../group___t_i_m___private.html#ga7330d4ad4e12698ef1d8e67cfd438c7b',1,'hierodule_tim.c']]],
-  ['tim1_5fup_5fisr_390',['TIM1_UP_ISR',['../group___t_i_m___private.html#gaf6331b08d1675c163dcc4cc7a5ce6826',1,'hierodule_tim.c']]],
-  ['tim1_5fup_5ftim10_5fisr_391',['TIM1_UP_TIM10_ISR',['../group___t_i_m___private.html#ga906444bfc525b6be78d8c3a53ae505fb',1,'hierodule_tim.c']]],
-  ['tim2_5fisr_392',['TIM2_ISR',['../group___t_i_m___private.html#ga4a8f471ebc9e760fdeac1d4ef9846b65',1,'hierodule_tim.c']]],
-  ['tim3_5fisr_393',['TIM3_ISR',['../group___t_i_m___private.html#ga21e52bbcdbdc6086543de7388d921e3a',1,'hierodule_tim.c']]],
-  ['tim4_5fisr_394',['TIM4_ISR',['../group___t_i_m___private.html#gae7e148559f922128aa5e7a95f9d9a927',1,'hierodule_tim.c']]],
-  ['tim5_5fisr_395',['TIM5_ISR',['../group___t_i_m___private.html#ga10e2ca76b6eccea36d95e86e9429c0ea',1,'hierodule_tim.c']]],
-  ['timerchannel_5fccr_396',['TimerChannel_CCR',['../group___t_i_m___private.html#gaec3ccbd77251a8e002f918cb53b9f593',1,'hierodule_tim.c']]],
-  ['timerchannel_5fen_397',['TimerChannel_EN',['../group___t_i_m___private.html#gad3a6bc4bbce1e5b30c0c1765337bc730',1,'hierodule_tim.c']]]
+  ['mrx_5fbuffer_474',['MRX_Buffer',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a24f6c72d35e6338e0871662cf48539e0',1,'HIERODULE_I2C_Wrapper']]],
+  ['mrx_5fbuffersize_475',['MRX_BufferSize',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#aabcbadab8877f7084dc6b6890b6871cb',1,'HIERODULE_I2C_Wrapper']]],
+  ['mrx_5fcounter_476',['MRX_Counter',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a3be1ee78bd42849032caa799c9ecc71c',1,'HIERODULE_I2C_Wrapper']]],
+  ['mrx_5fhandler_477',['MRX_Handler',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a6105121616281f5c1a933d07a6d9bcd4',1,'HIERODULE_I2C_Wrapper']]],
+  ['mtx_5fbuffer_478',['MTX_Buffer',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#aee184a213874d39c2bfab78dc299c0e6',1,'HIERODULE_I2C_Wrapper']]],
+  ['mtx_5fbuffersize_479',['MTX_BufferSize',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a5eed6e269ea2bc120a47ead1067d8237',1,'HIERODULE_I2C_Wrapper']]],
+  ['mtx_5fcounter_480',['MTX_Counter',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a21667ecee448066d5fe83af0cf652119',1,'HIERODULE_I2C_Wrapper']]],
+  ['mtx_5fhandler_481',['MTX_Handler',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#ae0655ca4db48e8f5066aa722e3327324',1,'HIERODULE_I2C_Wrapper']]]
 ];

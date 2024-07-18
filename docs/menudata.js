@@ -29,6 +29,7 @@ var menudata={children:[
 {text:"Usage",url:"usergroup0.html",children:[
 {text:"Timer",url:"_timer_usage.html"},
 {text:"USART",url:"_u_s_a_r_t__usage.html"},
-{text:"ADC",url:"_a_d_c__usage.html"}]},
+{text:"ADC",url:"_a_d_c__usage.html"},
+{text:"I2C",url:"_i2_c__usage.html"}]},
 {text:"Reference Manual",url:"modules.html"},
 {text:"Files",url:"files.html"}]}

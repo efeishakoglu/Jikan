@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['getbasefreq_48',['GetBaseFreq',['../group___t_i_m___private.html#gac7642937b574a36b1c269d7aa7e03d8f',1,'hierodule_tim.c']]],
-  ['global_49',['Global',['../group___a_d_c___public.html',1,'(Global Namespace)'],['../group___t_i_m___public.html',1,'(Global Namespace)'],['../group___u_s_a_r_t___public.html',1,'(Global Namespace)']]]
+  ['filterweight_50',['FilterWeight',['../struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#a832d02606a0fd209827b06cb39be4e11',1,'HIERODULE_ADC_Wrapper']]],
+  ['func_5fpointer_51',['FUNC_POINTER',['../group___t_i_m___public.html#gaa49fe4b8bb0e350f4bc65b5000ac897c',1,'hierodule_tim.h']]]
 ];

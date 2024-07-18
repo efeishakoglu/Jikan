@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['rx_5fbuffer_377',['RX_Buffer',['../struct_h_i_e_r_o_d_u_l_e___u_s_a_r_t___wrapper.html#a06e5864462c7f5bbc46fca19023726ed',1,'HIERODULE_USART_Wrapper']]],
-  ['rx_5fbuffersize_378',['RX_BufferSize',['../struct_h_i_e_r_o_d_u_l_e___u_s_a_r_t___wrapper.html#a2cef7cded0ec5b9596044f6593cf95a8',1,'HIERODULE_USART_Wrapper']]],
-  ['rx_5fhandler_379',['RX_Handler',['../struct_h_i_e_r_o_d_u_l_e___u_s_a_r_t___wrapper.html#a07c24b99bdc6c5ca677d5b439f687faf',1,'HIERODULE_USART_Wrapper']]],
-  ['rx_5findex_380',['RX_Index',['../struct_h_i_e_r_o_d_u_l_e___u_s_a_r_t___wrapper.html#af760b4ae4e42e4fab7a9a3ce4884a7c1',1,'HIERODULE_USART_Wrapper']]],
-  ['rx_5fnew_381',['RX_New',['../struct_h_i_e_r_o_d_u_l_e___u_s_a_r_t___wrapper.html#a1e73fb70f07704f79f4dac71be56656e',1,'HIERODULE_USART_Wrapper']]]
+  ['i2c1_5fwrapper_470',['I2C1_Wrapper',['../group___i2_c___private.html#ga16631622f65ec72c50edf909fd012ab3',1,'hierodule_i2c.c']]],
+  ['i2c2_5fwrapper_471',['I2C2_Wrapper',['../group___i2_c___private.html#gad58c69747941d70cbbf7c7dee147f1a1',1,'hierodule_i2c.c']]],
+  ['i2c3_5fwrapper_472',['I2C3_Wrapper',['../group___i2_c___private.html#ga82d1fbb8c6a4ae44cc0ce5f068617ecd',1,'hierodule_i2c.c']]],
+  ['i2c_5fperiod_5flength_473',['I2C_Period_Length',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#aaf3e797690badfe2e0012ee0f533b239',1,'HIERODULE_I2C_Wrapper']]]
 ];

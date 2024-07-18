@@ -1,0 +1,45 @@
+var group___i2_c___public =
+[
+    [ "HIERODULE_I2C_Wrapper", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html", [
+      [ "_I2C", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#af1e4c9f988c9de478edaf949424bd244", null ],
+      [ "I2C_Period_Length", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#aaf3e797690badfe2e0012ee0f533b239", null ],
+      [ "MRX_Buffer", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a24f6c72d35e6338e0871662cf48539e0", null ],
+      [ "MRX_BufferSize", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#aabcbadab8877f7084dc6b6890b6871cb", null ],
+      [ "MRX_Counter", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a3be1ee78bd42849032caa799c9ecc71c", null ],
+      [ "MRX_Handler", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a6105121616281f5c1a933d07a6d9bcd4", null ],
+      [ "MTX_Buffer", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#aee184a213874d39c2bfab78dc299c0e6", null ],
+      [ "MTX_BufferSize", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a5eed6e269ea2bc120a47ead1067d8237", null ],
+      [ "MTX_Counter", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a21667ecee448066d5fe83af0cf652119", null ],
+      [ "MTX_Handler", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#ae0655ca4db48e8f5066aa722e3327324", null ],
+      [ "SlaveAddress", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a9acd520d65be602a89644633b00d29d6", null ],
+      [ "SRX_Buffer", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a1842ec219da6ee1a1e1a3d95577c15af", null ],
+      [ "SRX_BufferSize", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a309e63c40be4309d5e197390555d2904", null ],
+      [ "SRX_Handler", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a83cc95131415d4e000a742464dbfd564", null ],
+      [ "SRX_Index", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#aa2d9220321352e8ff964750aa8108932", null ],
+      [ "SRX_New", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a0038f0b7c2e6e6a902f5462d34700705", null ],
+      [ "Status", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a6f90cfb840f82186bc791e4867aae280", null ],
+      [ "STX_Buffer", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#ab5dcf06ad5d06191e494a1dc73762f4e", null ],
+      [ "STX_Counter", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a297883f0e0ec5d492306ae67ab6cd326", null ],
+      [ "STX_Handler", "struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a9404f49cfd8929de40bf72ee66b6416a", null ]
+    ] ],
+    [ "HIERODULE_I2C_Status", "group___i2_c___public.html#ga1d4cf22414765e1cdc7fa5af32b60811", [
+      [ "HIERODULE_I2C_Status_IDLE", "group___i2_c___public.html#gga1d4cf22414765e1cdc7fa5af32b60811a8caff7712cf3981f383260bc897cf3f8", null ],
+      [ "HIERODULE_I2C_Status_MTX_SB", "group___i2_c___public.html#gga1d4cf22414765e1cdc7fa5af32b60811aab9f0aa096f36331a9a1f65d4bdaf118", null ],
+      [ "HIERODULE_I2C_Status_MTX_ADR", "group___i2_c___public.html#gga1d4cf22414765e1cdc7fa5af32b60811a6c86900762516624fdd2582afdfd1c93", null ],
+      [ "HIERODULE_I2C_Status_MTX", "group___i2_c___public.html#gga1d4cf22414765e1cdc7fa5af32b60811a44272e5f6184ba3edcea73f17fbadf8a", null ],
+      [ "HIERODULE_I2C_Status_SRX", "group___i2_c___public.html#gga1d4cf22414765e1cdc7fa5af32b60811ab5cd94d4ffb794b5e9c83b8a986e42ae", null ],
+      [ "HIERODULE_I2C_Status_MRX_SB", "group___i2_c___public.html#gga1d4cf22414765e1cdc7fa5af32b60811a8fa2d19e2144dea15235122db4fd313d", null ],
+      [ "HIERODULE_I2C_Status_MRX_ADR", "group___i2_c___public.html#gga1d4cf22414765e1cdc7fa5af32b60811a7ce27b2096f6132abb8a9028ba74f4be", null ],
+      [ "HIERODULE_I2C_Status_MRX", "group___i2_c___public.html#gga1d4cf22414765e1cdc7fa5af32b60811af0733dec833cb6552cccce4427bc77dd", null ],
+      [ "HIERODULE_I2C_Status_STX", "group___i2_c___public.html#gga1d4cf22414765e1cdc7fa5af32b60811a93024f999f74846f5f2efa64c72a02c9", null ]
+    ] ],
+    [ "HIERODULE_I2C_GetNextByte", "group___i2_c___public.html#ga06b9d9d82e83fce36e654d6bf9ae82ea", null ],
+    [ "HIERODULE_I2C_InitWrapper", "group___i2_c___public.html#ga84a0b2df32dc90f8b464160f74fa0ae9", null ],
+    [ "HIERODULE_I2C_MasterReceive", "group___i2_c___public.html#ga77594bd5a2b0caa2398eb06e3a4b8695", null ],
+    [ "HIERODULE_I2C_MasterTransmit", "group___i2_c___public.html#gafbdcebd2a181ad28bf0de98baec9e385", null ],
+    [ "HIERODULE_I2C_ReleaseWrapper", "group___i2_c___public.html#gad19d5f8ed1131e3908e19d508b8eb761", null ],
+    [ "I2C1_EV_IRQHandler", "group___i2_c___public.html#ga272ffa65eb8ff5c4a065b0d3473611cd", null ],
+    [ "I2C1_IRQHandler", "group___i2_c___public.html#gac45e5675f6f4e6e1dee2273baf245219", null ],
+    [ "I2C2_EV_IRQHandler", "group___i2_c___public.html#gabdb05db0781544b33e806a12940d062c", null ],
+    [ "I2C3_EV_IRQHandler", "group___i2_c___public.html#ga3d768b1a94bde2d539d42da580bd6404", null ]
+];

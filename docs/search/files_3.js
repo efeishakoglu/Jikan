@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['license_2emd_224',['LICENSE.md',['../_l_i_c_e_n_s_e_8md.html',1,'']]]
+  ['i2c_5fusage_2emd_290',['I2C_USAGE.md',['../_i2_c___u_s_a_g_e_8md.html',1,'']]]
 ];
