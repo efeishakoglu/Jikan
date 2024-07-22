@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usart_5fusage_2emd_295',['USART_USAGE.md',['../_u_s_a_r_t___u_s_a_g_e_8md.html',1,'']]]
+  ['timer_5fusage_2emd_323',['TIMER_USAGE.md',['../_t_i_m_e_r___u_s_a_g_e_8md.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timer_5fusage_2emd_294',['TIMER_USAGE.md',['../_t_i_m_e_r___u_s_a_g_e_8md.html',1,'']]]
+  ['spi_5fusage_2emd_322',['SPI_USAGE.md',['../_s_p_i___u_s_a_g_e_8md.html',1,'']]]
 ];
