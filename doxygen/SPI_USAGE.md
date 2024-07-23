@@ -48,6 +48,7 @@ My_SPI1_Wrapper = HIERODULE_SPI_InitWrapper (SPI1, 0, 24, TC_Handler);
 HIERODULE_SPI_TransmitByte(*My_SPI1_Wrapper, '!');
 ```
 Likewise, use @ref HIERODULE_SPI_TransmitByte "HIERODULE_SPI_TransmitByte" to set up the data response for the next transmission inside your transmission complete callback, which is invoked *whenever the peripheral receives a byte at the MOSI line and sends its respond through the MISO line*. You can parse the received bytes via @ref HIERODULE_SPI_GetNextByte "HIERODULE_SPI_GetNextByte".
+<br>You can also manipulate the transmit buffer to determine the next response with @ref HIERODULE_SPI_Wrapper::TX_Buffer "TX_Buffer" and @ref HIERODULE_SPI_Wrapper::TX_Counter "TX_Counter". Keeping different byte arrays and swapping between them on the fly with the received data in regard might be a good idea.
 
 <br><br>To start a transmission as master, call the master transmit routine with your wrapper, a byte array and the number of bytes to be transmitted.
 ```c
