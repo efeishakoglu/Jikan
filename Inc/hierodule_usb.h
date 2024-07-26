@@ -36,7 +36,12 @@ extern "C"
 #include <main.h>
 #include <stddef.h>
 #include <stdlib.h>
+
+/** \cond */
+#if __has_include("usbd_cdc_if.h") /** \endcond */
 #include <usbd_cdc_if.h>
+/** \cond */
+#endif /** \endcond */
 
 /** @brief Struct that keeps variables for the ring buffer and a pointer to the
   * transmission end callback routine.
@@ -111,7 +116,7 @@ void HIERODULE_USB_TransmitPackage(uint8_t *TX_Buffer, uint32_t Size);
   * @param Len Number of bytes received.
   * @return None
   */
-void HIERODULE_USB_Receive_Callback(uint8_t* Buf, uint32_t *Len);
+void HIERODULE_USB_Receive_Callback(uint8_t *Buf, uint32_t *Len);
 /**
   * @}
   */

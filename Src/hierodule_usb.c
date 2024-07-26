@@ -103,13 +103,17 @@ void HIERODULE_USB_ReleaseWrapper(void)
   */
 void HIERODULE_USB_TransmitPackage(uint8_t *TX_Buffer, uint32_t Size)
 {
+    /** \cond */
+    #ifdef __USBD_CDC_IF_H__ /** \endcond */
     CDC_Transmit_FS(TX_Buffer, Size);
+    /** \cond */
+    #endif /** \endcond */
 }
 
 /** @details  To be called right before the reception routine's return statement;
   * update CDC_Receive_FS (defined within usbd_cdc_if.c) accordingly.
   */
-void HIERODULE_USB_Receive_Callback(uint8_t* Buf, uint32_t *Len)
+void HIERODULE_USB_Receive_Callback(uint8_t *Buf, uint32_t *Len)
 {
     for(uint32_t _b = 0 ; _b < *Len ; _b++)
     {
