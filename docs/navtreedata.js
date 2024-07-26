@@ -26,10 +26,10 @@ var NAVTREE =
 [
   [ "Hierodule", "index.html", [
     [ "Overview", "index.html", [
-      [ "Aim and Scope of the Project", "index.html#autotoc_md17", null ],
-      [ "Compatibility", "index.html#autotoc_md18", null ],
-      [ "Attention", "index.html#autotoc_md19", null ],
-      [ "Contact", "index.html#autotoc_md20", null ]
+      [ "Aim and Scope of the Project", "index.html#autotoc_md19", null ],
+      [ "Compatibility", "index.html#autotoc_md20", null ],
+      [ "Attention", "index.html#autotoc_md21", null ],
+      [ "Contact", "index.html#autotoc_md22", null ]
     ] ],
     [ "Change Log", "_change_log.html", null ],
     [ "License", "_license_m_i_t.html", null ],
@@ -38,7 +38,8 @@ var NAVTREE =
       [ "USART", "_u_s_a_r_t__usage.html", null ],
       [ "ADC", "_a_d_c__usage.html", null ],
       [ "I2C", "_i2_c__usage.html", null ],
-      [ "SPI", "_s_p_i__usage.html", null ]
+      [ "SPI", "_s_p_i__usage.html", null ],
+      [ "USB", "_u_s_b__usage.html", null ]
     ] ],
     [ "Reference Manual", "modules.html", "modules" ],
     [ "Files", "files.html", "files" ]
@@ -48,8 +49,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_d_c__usage.html",
-"group___t_i_m___private.html#gac4a0964e3dcf95f2e3c2443d6851980c",
-"group___t_i_m___public.html#gae194ef2e9384ca2fd29c2615e6dc4093"
+"group___t_i_m___private.html#gac3e80b389b8bfb38133abed5a4b169b8",
+"group___t_i_m___public.html#gae0d2e6c0a238513729f09f379747abda"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

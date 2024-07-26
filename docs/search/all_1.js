@@ -10,5 +10,6 @@ var searchData=
   ['adc_5fusage_2emd_10',['ADC_USAGE.md',['../_a_d_c___u_s_a_g_e_8md.html',1,'']]],
   ['apb1_5fdiv1_11',['APB1_DIV1',['../group___t_i_m___private.html#ga21361932563c22a55116342dc4397b40',1,'hierodule_tim.c']]],
   ['apb1_5fdiv1_5fsingle_12',['APB1_DIV1_SINGLE',['../group___t_i_m___private.html#gaf5d5dd33ec53d4c7ed6c7f36b960bb70',1,'hierodule_tim.c']]],
-  ['apb2_5fdiv1_13',['APB2_DIV1',['../group___t_i_m___private.html#ga6d4ec9291aecc163ae887c2d805c94e5',1,'hierodule_tim.c']]]
+  ['apb2_5fdiv1_13',['APB2_DIV1',['../group___t_i_m___private.html#ga6d4ec9291aecc163ae887c2d805c94e5',1,'hierodule_tim.c']]],
+  ['appendtobuffer_14',['AppendToBuffer',['../group___u_s_b___private.html#ga3393d302ee7c12bf1c3026a55b950f41',1,'hierodule_usb.c']]]
 ];

@@ -33,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Hierodule
-   &#160;<span id="projectnumber">1.5.0</span>
+   &#160;<span id="projectnumber">1.6.0</span>
    </div>
    <div id="projectbrief">Utility module set for STM32 MCUs</div>
   </td>
@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('group___a_d_c___private.html',''); ini
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga83ab26599aa494bb4c722193d8e6ee2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c___private.html#ga83ab26599aa494bb4c722193d8e6ee2b">Smoothen</a> (<a class="el" href="struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html">HIERODULE_ADC_Wrapper</a> *Wrapper)</td></tr>
+<tr class="memitem:ga83ab26599aa494bb4c722193d8e6ee2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c___private.html#ga83ab26599aa494bb4c722193d8e6ee2b">Smoothen</a> (<a class="el" href="struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html">HIERODULE_ADC_Wrapper</a> *<a class="el" href="group___u_s_b___private.html#ga58c9bfaf906117f5eb61f70070e886ec">Wrapper</a>)</td></tr>
 <tr class="memdesc:ga83ab26599aa494bb4c722193d8e6ee2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a cumulative-smoothening filter before updating the wrapper data field.  <a href="group___a_d_c___private.html#ga83ab26599aa494bb4c722193d8e6ee2b">More...</a><br /></td></tr>
 <tr class="separator:ga83ab26599aa494bb4c722193d8e6ee2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -149,14 +149,12 @@ IRQ definitions with custom ISR implementations are also included at the end of 
 
 <p class="definition">Definition at line <a class="el" href="hierodule__adc_8c_source.html#l00047">47</a> of file <a class="el" href="hierodule__adc_8c_source.html">hierodule_adc.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    Wrapper-&gt;<a class="code" href="struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#af75ea13d281210e54c4d4c09ea42b1df">Data</a> = (Wrapper-&gt;<a class="code" href="struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#af75ea13d281210e54c4d4c09ea42b1df">Data</a>*Wrapper-&gt;<a class="code" href="struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#a832d02606a0fd209827b06cb39be4e11">FilterWeight</a>) +</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        (Wrapper-&gt;<a class="code" href="struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#a14252f85530d18d762205e792e15d14b">_ADC</a>-&gt;DR*(1.0-Wrapper-&gt;<a class="code" href="struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#a832d02606a0fd209827b06cb39be4e11">FilterWeight</a>));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="group___u_s_b___public.html#ga58c9bfaf906117f5eb61f70070e886ec">Wrapper</a>-&gt;Data = (<a class="code" href="group___u_s_b___public.html#ga58c9bfaf906117f5eb61f70070e886ec">Wrapper</a>-&gt;Data*<a class="code" href="group___u_s_b___public.html#ga58c9bfaf906117f5eb61f70070e886ec">Wrapper</a>-&gt;FilterWeight) +</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        (<a class="code" href="group___u_s_b___public.html#ga58c9bfaf906117f5eb61f70070e886ec">Wrapper</a>-&gt;_ADC-&gt;DR*(1.0-<a class="code" href="group___u_s_b___public.html#ga58c9bfaf906117f5eb61f70070e886ec">Wrapper</a>-&gt;FilterWeight));</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="ttc" id="astruct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper_html_a14252f85530d18d762205e792e15d14b"><div class="ttname"><a href="struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#a14252f85530d18d762205e792e15d14b">HIERODULE_ADC_Wrapper::_ADC</a></div><div class="ttdeci">ADC_TypeDef * _ADC</div><div class="ttdoc">Pointer to the ADC peripheral.</div><div class="ttdef"><b>Definition:</b> <a href="hierodule__adc_8h_source.html#l00051">hierodule_adc.h:51</a></div></div>
-<div class="ttc" id="astruct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper_html_a832d02606a0fd209827b06cb39be4e11"><div class="ttname"><a href="struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#a832d02606a0fd209827b06cb39be4e11">HIERODULE_ADC_Wrapper::FilterWeight</a></div><div class="ttdeci">double FilterWeight</div><div class="ttdoc">Filter weight for the smoothening filter.</div><div class="ttdef"><b>Definition:</b> <a href="hierodule__adc_8h_source.html#l00061">hierodule_adc.h:61</a></div></div>
-<div class="ttc" id="astruct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper_html_af75ea13d281210e54c4d4c09ea42b1df"><div class="ttname"><a href="struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#af75ea13d281210e54c4d4c09ea42b1df">HIERODULE_ADC_Wrapper::Data</a></div><div class="ttdeci">uint16_t Data</div><div class="ttdoc">Variable to assign the received ADC data.</div><div class="ttdef"><b>Definition:</b> <a href="hierodule__adc_8h_source.html#l00055">hierodule_adc.h:55</a></div></div>
+<div class="ttc" id="agroup___u_s_b___public_html_ga58c9bfaf906117f5eb61f70070e886ec"><div class="ttname"><a href="group___u_s_b___public.html#ga58c9bfaf906117f5eb61f70070e886ec">Wrapper</a></div><div class="ttdeci">HIERODULE_USB_Wrapper Wrapper</div><div class="ttdoc">Extern declaration for the wrapper instance in the source file.</div><div class="ttdef"><b>Definition:</b> <a href="hierodule__usb_8c_source.html#l00027">hierodule_usb.c:27</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="hierodule__adc_8h_source.html#l00051">HIERODULE_ADC_Wrapper::_ADC</a>, <a class="el" href="hierodule__adc_8h_source.html#l00055">HIERODULE_ADC_Wrapper::Data</a>, and <a class="el" href="hierodule__adc_8h_source.html#l00061">HIERODULE_ADC_Wrapper::FilterWeight</a>.</p>
+<p class="reference">References <a class="el" href="hierodule__usb_8c_source.html#l00027">Wrapper</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="hierodule__adc_8c_source.html#l00176">ADC1_2_IRQHandler()</a>, <a class="el" href="hierodule__adc_8c_source.html#l00267">ADC1_IRQHandler()</a>, and <a class="el" href="hierodule__adc_8c_source.html#l00233">ADC_IRQHandler()</a>.</p>
 

@@ -31,6 +31,7 @@ var menudata={children:[
 {text:"USART",url:"_u_s_a_r_t__usage.html"},
 {text:"ADC",url:"_a_d_c__usage.html"},
 {text:"I2C",url:"_i2_c__usage.html"},
-{text:"SPI",url:"_s_p_i__usage.html"}]},
+{text:"SPI",url:"_s_p_i__usage.html"},
+{text:"USB",url:"_u_s_b__usage.html"}]},
 {text:"Reference Manual",url:"modules.html"},
 {text:"Files",url:"files.html"}]}

@@ -11,6 +11,7 @@
         <tab type="user" visible="yes" title="ADC" url="@ref ADC_Usage"/>
         <tab type="user" visible="yes" title="I2C" url="@ref I2C_Usage"/>
         <tab type="user" visible="yes" title="SPI" url="@ref SPI_Usage"/>
+        <tab type="user" visible="yes" title="USB" url="@ref USB_Usage"/>
     </tab>
     <tab type="modules" visible="yes" title="Reference Manual" intro=""/>
     <tab type="filelist" visible="yes" title="Files" intro=""/>
