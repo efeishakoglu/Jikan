@@ -33,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Hierodule
-   &#160;<span id="projectnumber">1.6.1</span>
+   &#160;<span id="projectnumber">1.6.2</span>
    </div>
    <div id="projectbrief">Utility module set for STM32 MCUs</div>
   </td>
@@ -389,70 +389,84 @@ Requires <a class="el" href="group___t_i_m___public.html#ga0af79361cfa863ee37d4c
 <tr class="memitem:ga51741dbf9b0de1b8b56b5a6f1ef2e694"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#ga51741dbf9b0de1b8b56b5a6f1ef2e694">TIM1_UP_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:ga51741dbf9b0de1b8b56b5a6f1ef2e694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 1 update interrupt IRQ implementation.<br  />
 Requires the device specific macro __STM32F103xB_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#ga51741dbf9b0de1b8b56b5a6f1ef2e694">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 1.  <a href="group___t_i_m___public.html#ga51741dbf9b0de1b8b56b5a6f1ef2e694">More...</a><br /></td></tr>
 <tr class="separator:ga51741dbf9b0de1b8b56b5a6f1ef2e694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad1fd361bc5ad89facee67c76d1ff8dc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#gad1fd361bc5ad89facee67c76d1ff8dc0">TIM1_UP_TIM10_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:gad1fd361bc5ad89facee67c76d1ff8dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 1 update interrupt - timer 10 IRQ implementation.<br  />
 Requires the device specific macro __STM32F401xC_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#gad1fd361bc5ad89facee67c76d1ff8dc0">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 1 or 10.  <a href="group___t_i_m___public.html#gad1fd361bc5ad89facee67c76d1ff8dc0">More...</a><br /></td></tr>
 <tr class="separator:gad1fd361bc5ad89facee67c76d1ff8dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae8a61b27afdb07c70d6b863c44284ca6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#gae8a61b27afdb07c70d6b863c44284ca6">TIM1_CC_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:gae8a61b27afdb07c70d6b863c44284ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 1 capture compare interrupt IRQ implementation.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#gae8a61b27afdb07c70d6b863c44284ca6">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 1.  <a href="group___t_i_m___public.html#gae8a61b27afdb07c70d6b863c44284ca6">More...</a><br /></td></tr>
 <tr class="separator:gae8a61b27afdb07c70d6b863c44284ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac932fa89be69a5610d5b3a1ee6f6aed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#gac932fa89be69a5610d5b3a1ee6f6aed7">TIM1_BRK_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:gac932fa89be69a5610d5b3a1ee6f6aed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 1 break interrupt IRQ implementation.<br  />
 Requires the device specific macro __STM32F103xB_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#gac932fa89be69a5610d5b3a1ee6f6aed7">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 1.  <a href="group___t_i_m___public.html#gac932fa89be69a5610d5b3a1ee6f6aed7">More...</a><br /></td></tr>
 <tr class="separator:gac932fa89be69a5610d5b3a1ee6f6aed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3b60f6118cdd3449f4ed29fde4704236"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#ga3b60f6118cdd3449f4ed29fde4704236">TIM1_BRK_TIM9_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:ga3b60f6118cdd3449f4ed29fde4704236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 1 break interrupt - timer 9 IRQ implementation.<br  />
 Requires the device specific macro __STM32F401xC_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#ga3b60f6118cdd3449f4ed29fde4704236">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 1 or 9.  <a href="group___t_i_m___public.html#ga3b60f6118cdd3449f4ed29fde4704236">More...</a><br /></td></tr>
 <tr class="separator:ga3b60f6118cdd3449f4ed29fde4704236"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0bf60da545bf36717bd2c9ce3d13bf81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#ga0bf60da545bf36717bd2c9ce3d13bf81">TIM1_BRK_UP_TRG_COM_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:ga0bf60da545bf36717bd2c9ce3d13bf81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 1 break - update - trigger comm IRQ implementation.<br  />
 Requires the device specific macro __STM32F030x6_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#ga0bf60da545bf36717bd2c9ce3d13bf81">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 1.  <a href="group___t_i_m___public.html#ga0bf60da545bf36717bd2c9ce3d13bf81">More...</a><br /></td></tr>
 <tr class="separator:ga0bf60da545bf36717bd2c9ce3d13bf81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga38ad4725462bdc5e86c4ead4f04b9fc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#ga38ad4725462bdc5e86c4ead4f04b9fc2">TIM2_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:ga38ad4725462bdc5e86c4ead4f04b9fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 2 IRQ implementation.<br  />
 Requires the device specific macro __STM32F103xB_H or __STM32F401xC_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#ga38ad4725462bdc5e86c4ead4f04b9fc2">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 2.  <a href="group___t_i_m___public.html#ga38ad4725462bdc5e86c4ead4f04b9fc2">More...</a><br /></td></tr>
 <tr class="separator:ga38ad4725462bdc5e86c4ead4f04b9fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac8e51d2183b5230cbd5481f8867adce9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#gac8e51d2183b5230cbd5481f8867adce9">TIM3_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:gac8e51d2183b5230cbd5481f8867adce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 3 IRQ implementation.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#gac8e51d2183b5230cbd5481f8867adce9">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 3.  <a href="group___t_i_m___public.html#gac8e51d2183b5230cbd5481f8867adce9">More...</a><br /></td></tr>
 <tr class="separator:gac8e51d2183b5230cbd5481f8867adce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7133f3f78767503641d307386e68bd28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#ga7133f3f78767503641d307386e68bd28">TIM4_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:ga7133f3f78767503641d307386e68bd28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 4 IRQ implementation.<br  />
 Requires the device specific macro __STM32F103xB_H or __STM32F401xC_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#ga7133f3f78767503641d307386e68bd28">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 4.  <a href="group___t_i_m___public.html#ga7133f3f78767503641d307386e68bd28">More...</a><br /></td></tr>
 <tr class="separator:ga7133f3f78767503641d307386e68bd28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5e66446caf21dd90191dc07a13ce2378"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#ga5e66446caf21dd90191dc07a13ce2378">TIM5_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:ga5e66446caf21dd90191dc07a13ce2378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 5 IRQ implementation.<br  />
 Requires the device specific macro __STM32F401xC_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#ga5e66446caf21dd90191dc07a13ce2378">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 5.  <a href="group___t_i_m___public.html#ga5e66446caf21dd90191dc07a13ce2378">More...</a><br /></td></tr>
 <tr class="separator:ga5e66446caf21dd90191dc07a13ce2378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga098245bf4e2f8844b22692b034a266fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#ga098245bf4e2f8844b22692b034a266fb">TIM1_TRG_COM_TIM11_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:ga098245bf4e2f8844b22692b034a266fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 1 trigger comm interrupt - timer 11 IRQ implementation.<br  />
 Requires the device specific macro __STM32F401xC_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#ga098245bf4e2f8844b22692b034a266fb">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 1 or 11.  <a href="group___t_i_m___public.html#ga098245bf4e2f8844b22692b034a266fb">More...</a><br /></td></tr>
 <tr class="separator:ga098245bf4e2f8844b22692b034a266fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga422d57e8efb93bfbfa13cf343587af8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#ga422d57e8efb93bfbfa13cf343587af8c">TIM14_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:ga422d57e8efb93bfbfa13cf343587af8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 14 IRQ implementation.<br  />
 Requires the device specific macro __STM32F030x6_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#ga422d57e8efb93bfbfa13cf343587af8c">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 14.  <a href="group___t_i_m___public.html#ga422d57e8efb93bfbfa13cf343587af8c">More...</a><br /></td></tr>
 <tr class="separator:ga422d57e8efb93bfbfa13cf343587af8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae194ef2e9384ca2fd29c2615e6dc4093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#gae194ef2e9384ca2fd29c2615e6dc4093">TIM16_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:gae194ef2e9384ca2fd29c2615e6dc4093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 16 IRQ implementation.<br  />
 Requires the device specific macro __STM32F030x6_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#gae194ef2e9384ca2fd29c2615e6dc4093">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 16.  <a href="group___t_i_m___public.html#gae194ef2e9384ca2fd29c2615e6dc4093">More...</a><br /></td></tr>
 <tr class="separator:gae194ef2e9384ca2fd29c2615e6dc4093"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab219fe510cd6e492a782cde5290eb0e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___t_i_m___public.html#gab219fe510cd6e492a782cde5290eb0e3">TIM17_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:gab219fe510cd6e492a782cde5290eb0e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer 17 IRQ implementation.<br  />
 Requires the device specific macro __STM32F030x6_H to be defined.<br  />
-Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.  <a href="group___t_i_m___public.html#gab219fe510cd6e492a782cde5290eb0e3">More...</a><br /></td></tr>
+Requires <a class="el" href="group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381">HIERODULE_TIM_HANDLE_IRQ</a> to be defined.<br  />
+Won't be compiled if <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> equals 17.  <a href="group___t_i_m___public.html#gab219fe510cd6e492a782cde5290eb0e3">More...</a><br /></td></tr>
 <tr class="separator:gab219fe510cd6e492a782cde5290eb0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>

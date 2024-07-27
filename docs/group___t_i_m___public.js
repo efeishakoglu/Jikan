@@ -2,6 +2,7 @@ var group___t_i_m___public =
 [
     [ "HIERODULE_TIM_CONVENIENT_IRQ", "group___t_i_m___public.html#ga0af79361cfa863ee37d4c22e5f5d2416", null ],
     [ "HIERODULE_TIM_HANDLE_IRQ", "group___t_i_m___public.html#ga2ba013e0174c7d85cf93d78ee6602381", null ],
+    [ "HIERODULE_TIM_RESERVED", "group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae", null ],
     [ "FUNC_POINTER", "group___t_i_m___public.html#gaa49fe4b8bb0e350f4bc65b5000ac897c", null ],
     [ "HIERODULE_TIM_Assign_ISR_BRK", "group___t_i_m___public.html#gaf4e034a1bc65f206f06072b93b107c73", null ],
     [ "HIERODULE_TIM_Assign_ISR_CC1", "group___t_i_m___public.html#gab9b50dd2303537574b108ab7cc5b11ab", null ],

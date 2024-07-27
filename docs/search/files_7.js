@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spi_5fusage_2emd_337',['SPI_USAGE.md',['../_s_p_i___u_s_a_g_e_8md.html',1,'']]]
+  ['spi_5fusage_2emd_338',['SPI_USAGE.md',['../_s_p_i___u_s_a_g_e_8md.html',1,'']]]
 ];

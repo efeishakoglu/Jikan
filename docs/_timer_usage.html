@@ -33,7 +33,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Hierodule
-   &#160;<span id="projectnumber">1.6.1</span>
+   &#160;<span id="projectnumber">1.6.2</span>
    </div>
    <div id="projectbrief">Utility module set for STM32 MCUs</div>
   </td>
@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('_timer_usage.html',''); initResizable(
 <li>PWM output management.</li>
 <li>Basic interrupt handling and ISR assignment for timers (the latter being optional).</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md27"></a>
 PWM</h1>
 <p>You can use the provided PWM routines to</p><ul>
 <li>Toggle counters.</li>
@@ -137,7 +137,7 @@ The module does not address peripheral configuration and initialization, it is a
 All enabler routines cited above are paired with their disabler counterparts. Likewise, "set" functions come with their "get" counterparts.<br  />
  You can define macro constants instead of using mere integers to select output channels if you prefer those to really stand out in the code.<br  />
  Keep in mind that not all timers have same the set of status flags, identical control registers or the same number of output channels. Consult the device manual to verify the peripheral's features.</p>
-<h1><a class="anchor" id="autotoc_md26"></a>
+<h1><a class="anchor" id="autotoc_md28"></a>
 Timer Interrupts</h1>
 <p>The main goal of this section is to facilitate the assignment of an ISR to an IRQ through a single, straightforward call. <br  />
  Also notice that the Timer IRQs are defined in the module's source file. The compiler will throw a multiple definition error if an IRQ is defined somewhere else. <br  />
@@ -199,7 +199,14 @@ In this case, you need to define your IRQs somewhere else. You can still use the
 Finally, you can use <a class="el" href="group___t_i_m___public.html#ga046bc3a9783985e3d1764f98a58aa38b">HIERODULE_TIM_SetRepetition</a> to extend the effective period of your timer. </p><div class="fragment"><div class="line"><a class="code" href="group___t_i_m___public.html#ga046bc3a9783985e3d1764f98a58aa38b">HIERODULE_TIM_SetRepetition</a>(TIM1, 9);</div>
 <div class="ttc" id="agroup___t_i_m___public_html_ga046bc3a9783985e3d1764f98a58aa38b"><div class="ttname"><a href="group___t_i_m___public.html#ga046bc3a9783985e3d1764f98a58aa38b">HIERODULE_TIM_SetRepetition</a></div><div class="ttdeci">void HIERODULE_TIM_SetRepetition(TIM_TypeDef *Timer, uint32_t Reps)</div><div class="ttdoc">Sets the additional period repetitions of a timer.</div><div class="ttdef"><b>Definition:</b> <a href="hierodule__tim_8c_source.html#l00705">hierodule_tim.c:705</a></div></div>
 </div><!-- fragment --><p> As for the given example, your capture compare interrupts will still be triggered only once every period, but your update interrupt will be triggered after 9 additional periods, which is in effect multiplying the UPD interrupt period by ten.<br  />
- This feature is usually limited to advanced timers. </p>
+ This feature is usually limited to advanced timers.</p>
+<p><br  />
+<br  />
+If your system works on FreeRTOS, you'll probably use a timer as the timebase for HAL, since FreeRTOS uses SysTick, which is the usual timebase for HAL. <br  />
+Which means, the IRQ of the timer HAL uses will be defined somewhere else, ergo, the compiler will throw a multiple definition error. You can use <a class="el" href="group___t_i_m___public.html#gad4d45799a694995d1bd27b4b0af921ae">HIERODULE_TIM_RESERVED</a> for such cases. <br  />
+The constant's defined as 0 by default, which doesn't do anything. Simply, define the constant with its value as the problematic timer's number, and its IRQ won't be compiled within the module. Define it as 1, for Timer 1, for example. </p><div class="fragment"><div class="line"><span class="preprocessor">#define HIERODULE_TIM_RESERVED 1</span></div>
+</div><!-- fragment --><p> <br  />
+Again, remember that IRQs of some timers are joined into a single routine. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

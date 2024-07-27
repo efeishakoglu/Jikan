@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.6.2] - 2024-07-27
+
+### Fixed
+
+- Timer Module, preprocessor toggling for timer IRQs, in case they're reserved as timebase for HAL.
+
 ## [1.6.1] - 2024-07-26
 
 ### Fixed

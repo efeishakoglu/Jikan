@@ -66,3 +66,5 @@ ALIASES += rv_usage_wrapper_isr{2}="Secondly, you need a void function with a \1
 
 ALIASES += rv_usage_wrapper_release{2}="You can \"release\" the instance of your wrapper to free memory: @code{c} HIERODULE_\1_ReleaseWrapper(*\2); @endcode Keep in mind this only frees the wrapper pointer in the module and not your double pointer that points to it. It's best to free and nullify that, as well: @code{c} free(\2); @endcode @code{c}\2 = NULL; @endcode Notice that trying to access a freed memory address might turn out ugly for your run-time. However, you can reuse your double pointer to re-initialize the \1 peripheral after releasing it."
 
+ALIASES += rv_tim_reserved{1}="Won't be compiled if @ref HIERODULE_TIM_RESERVED \"HIERODULE_TIM_RESERVED\" equals \1"
+

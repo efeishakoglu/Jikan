@@ -38,6 +38,15 @@ extern "C"
   */
 #define HIERODULE_TIM_HANDLE_IRQ
 
+/** @brief Precompiler constant to omit the IRQ implementation of a timer.
+  * @details This is basically to reserve a timer for HAL timebase, when
+  * FreeRTOS uses SysTick.\n
+  * When declared as 0, it will have no effect. When declared as n, TIMn IRQ
+  * won't be implemented.\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  */
+#define HIERODULE_TIM_RESERVED 0
+
 /** @brief Precompiler constant to select timer ISR assignment routines
   * @details When commented out, ISRs will be assigned per IRQ instead
   * of per interrupt flag and the routine @ref Check_IT "Check_IT" will

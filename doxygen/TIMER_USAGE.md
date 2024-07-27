@@ -134,3 +134,10 @@ HIERODULE_TIM_SetRepetition(TIM1, 9);
 As for the given example, your capture compare interrupts will still be triggered only once every period, but your update interrupt will be triggered after 9 additional periods, which is in effect multiplying the UPD interrupt period by ten.<br>
 This feature is usually limited to advanced timers.
 
+<br><br>If your system works on FreeRTOS, you'll probably use a timer as the timebase for HAL, since FreeRTOS uses SysTick, which is the usual timebase for HAL.
+<br>Which means, the IRQ of the timer HAL uses will be defined somewhere else, ergo, the compiler will throw a multiple definition error. You can use @ref HIERODULE_TIM_RESERVED "HIERODULE_TIM_RESERVED" for such cases.
+<br>The constant's defined as 0 by default, which doesn't do anything. Simply, define the constant with its value as the problematic timer's number, and its IRQ won't be compiled within the module. Define it as 1, for Timer 1, for example.
+```c
+#define HIERODULE_TIM_RESERVED 1
+```
+<br>Again, remember that IRQs of some timers are joined into a single routine.

@@ -1476,10 +1476,13 @@ void HIERODULE_TIM_Assign_ISR_BRK(TIM_TypeDef *Timer, FUNC_POINTER ISR)
 #ifdef __STM32F103xB_H /** \endcond */
 /** @brief @rv_irq_imp_bri{Timer 1 update interrupt}\n
   * @rv_def_req_device{__STM32F103xB_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{1}
   * @return None
   * @details @rv_irq_imp_solo_det{update}
   */
+/** \cond */
+#if (HIERODULE_TIM_RESERVED != 1) /** \endcond */
 extern void TIM1_UP_IRQHandler(void)
 {
     /** \cond */
@@ -1492,13 +1495,18 @@ extern void TIM1_UP_IRQHandler(void)
     #endif /** \endcond */
 }
 /** \cond */
+#endif
+
 #elif defined __STM32F401xC_H /** \endcond */
 /** @brief @rv_irq_imp_bri{Timer 1 update interrupt - timer 10}\n
   * @rv_def_req_device{__STM32F401xC_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{1 or 10}
   * @return None
   * @details @rv_irq_imp_det
   */
+/** \cond */
+#if ( (HIERODULE_TIM_RESERVED != 1) && (HIERODULE_TIM_RESERVED != 10) ) /** \endcond */
 extern void TIM1_UP_TIM10_IRQHandler(void)
 {
     /** \cond */
@@ -1521,14 +1529,19 @@ extern void TIM1_UP_TIM10_IRQHandler(void)
     /** \cond */
     #endif /** \endcond */
 }
-    /** \cond */
+/** \cond */
+#endif
+
 #endif  /** \endcond */
 
 /** @brief @rv_irq_imp_bri{Timer 1 capture compare interrupt}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{1}
   * @return None
   * @details @rv_irq_imp_det
   */
+/** \cond */
+#if (HIERODULE_TIM_RESERVED != 1) /** \endcond */
 extern void TIM1_CC_IRQHandler(void)
 {
     /** \cond */
@@ -1557,13 +1570,18 @@ extern void TIM1_CC_IRQHandler(void)
 }
 
 /** \cond */
+#endif
+
 #ifdef __STM32F103xB_H /** \endcond */
 /** @brief @rv_irq_imp_bri{Timer 1 break interrupt}\n
   * @rv_def_req_device{__STM32F103xB_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{1}
   * @return None
   * @details @rv_irq_imp_solo_det{break}
   */
+/** \cond */
+#if (HIERODULE_TIM_RESERVED != 1) /** \endcond */
 extern void TIM1_BRK_IRQHandler(void)
 {
     /** \cond */
@@ -1576,13 +1594,17 @@ extern void TIM1_BRK_IRQHandler(void)
     #endif /** \endcond */
 }
 /** \cond */
+#endif
 #elif defined __STM32F401xC_H /** \endcond */
 /** @brief @rv_irq_imp_bri{Timer 1 break interrupt - timer 9}\n
   * @rv_def_req_device{__STM32F401xC_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{1 or 9}
   * @return None
   * @details @rv_irq_imp_det
   */
+/** \cond */
+#if ( (HIERODULE_TIM_RESERVED != 1) && (HIERODULE_TIM_RESERVED != 9) ) /** \endcond */
 extern void TIM1_BRK_TIM9_IRQHandler(void)
 {
     /** \cond */
@@ -1611,13 +1633,17 @@ extern void TIM1_BRK_TIM9_IRQHandler(void)
 }
 
 /** \cond */
+#endif
 #elif defined __STM32F030x6_H /** \endcond */
 /** @brief @rv_irq_imp_bri{Timer 1 break - update - trigger comm}\n
   * @rv_def_req_device{__STM32F030x6_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{1}
   * @return None
   * @details @rv_irq_imp_det
   */
+/** \cond */
+#if (HIERODULE_TIM_RESERVED != 1) /** \endcond */
 extern void TIM1_BRK_UP_TRG_COM_IRQHandler(void)
 {
     /** \cond */
@@ -1637,16 +1663,20 @@ extern void TIM1_BRK_UP_TRG_COM_IRQHandler(void)
     #endif /** \endcond */
 }
 /** \cond */
+#endif
 #endif /** \endcond */
 
 /** @brief @rv_irq_imp_bri{Timer 2}\n
   * @rv_def_req_device{__STM32F103xB_H or __STM32F401xC_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{2}
   * @return None
   * @details @rv_irq_imp_det
   */
 /** \cond */
 #if ( (defined __STM32F103xB_H) || (defined __STM32F401xC_H) ) /** \endcond */
+/** \cond */
+#if (HIERODULE_TIM_RESERVED != 2) /** \endcond */
 extern void TIM2_IRQHandler(void)
 {
     /** \cond */
@@ -1678,13 +1708,17 @@ extern void TIM2_IRQHandler(void)
     #endif /** \endcond */
 }
 /** \cond */
+#endif
 #endif /** \endcond */
 
 /** @brief @rv_irq_imp_bri{Timer 3}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{3}
   * @return None
   * @details @rv_irq_imp_det
   */
+/** \cond */
+#if (HIERODULE_TIM_RESERVED != 3) /** \endcond */
 extern void TIM3_IRQHandler(void)
 {
     /** \cond */
@@ -1715,15 +1749,20 @@ extern void TIM3_IRQHandler(void)
     /** \cond */
     #endif /** \endcond */
 }
+/** \cond */
+#endif /** \endcond */
 
 /** @brief @rv_irq_imp_bri{Timer 4}\n
   * @rv_def_req_device{__STM32F103xB_H or __STM32F401xC_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{4}
   * @return None
   * @details @rv_irq_imp_det
   */
 /** \cond */
 #if ( (defined __STM32F103xB_H) || (defined __STM32F401xC_H) ) /** \endcond */
+/** \cond */
+#if (HIERODULE_TIM_RESERVED != 4) /** \endcond */
 extern void TIM4_IRQHandler(void)
 {
     /** \cond */
@@ -1755,16 +1794,20 @@ extern void TIM4_IRQHandler(void)
     #endif /** \endcond */
 }
 /** \cond */
+#endif
 #endif /** \endcond */
 
 /** \cond */
 #ifdef __STM32F401xC_H /** \endcond */
 /** @brief @rv_irq_imp_bri{Timer 5}\n
   * @rv_def_req_device{__STM32F401xC_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{5}
   * @return None
   * @details @rv_irq_imp_det
   */
+/** \cond */
+#if (HIERODULE_TIM_RESERVED != 5) /** \endcond */
 extern void TIM5_IRQHandler(void)
 {
     /** \cond */
@@ -1795,13 +1838,18 @@ extern void TIM5_IRQHandler(void)
     /** \cond */
     #endif /** \endcond */
 }
+/** \cond */
+#endif /** \endcond */
 
 /** @brief @rv_irq_imp_bri{Timer 1 trigger comm interrupt - timer 11}\n
   * @rv_def_req_device{__STM32F401xC_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{1 or 11}
   * @return None
   * @details @rv_irq_imp_det
   */
+/** \cond */
+#if ( (HIERODULE_TIM_RESERVED != 1) && (HIERODULE_TIM_RESERVED != 11) ) /** \endcond */
 extern void TIM1_TRG_COM_TIM11_IRQHandler(void)
 {
     /** \cond */
@@ -1822,14 +1870,18 @@ extern void TIM1_TRG_COM_TIM11_IRQHandler(void)
 }
 
 /** \cond */
+#endif
 #elif defined __STM32F030x6_H /** \endcond */
 
 /** @brief @rv_irq_imp_bri{Timer 14}\n
   * @rv_def_req_device{__STM32F030x6_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{14}
   * @return None
   * @details @rv_irq_imp_det
   */
+/** \cond */
+#if (HIERODULE_TIM_RESERVED != 14) /** \endcond */
 extern void TIM14_IRQHandler(void)
 {
     /** \cond */
@@ -1848,13 +1900,18 @@ extern void TIM14_IRQHandler(void)
     /** \cond */
     #endif /** \endcond */
 }
+/** \cond */
+#endif /** \endcond */
 
 /** @brief @rv_irq_imp_bri{Timer 16}\n
   * @rv_def_req_device{__STM32F030x6_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{16}
   * @return None
   * @details @rv_irq_imp_det
   */
+/** \cond */
+#if (HIERODULE_TIM_RESERVED != 16) /** \endcond */
 extern void TIM16_IRQHandler(void)
 {
     /** \cond */
@@ -1873,13 +1930,18 @@ extern void TIM16_IRQHandler(void)
     /** \cond */
     #endif /** \endcond */
 }
+/** \cond */
+#endif /** \endcond */
 
 /** @brief @rv_irq_imp_bri{Timer 17}\n
   * @rv_def_req_device{__STM32F030x6_H}\n
-  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_tim_reserved{17}
   * @return None
   * @details @rv_irq_imp_det
   */
+/** \cond */
+#if (HIERODULE_TIM_RESERVED != 17) /** \endcond */
 extern void TIM17_IRQHandler(void)
 {
     /** \cond */
@@ -1902,6 +1964,8 @@ extern void TIM17_IRQHandler(void)
     /** \cond */
     #endif /** \endcond */
 }
+/** \cond */
+#endif /** \endcond */
 
 /** \cond */
 #endif
