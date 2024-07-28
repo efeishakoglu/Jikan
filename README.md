@@ -9,17 +9,17 @@ Aim and Scope of the Project
 - The primary focus is to put together a set of peripheral utility routines for STM32 MCUs to make it simpler and more managable to develop on STM devices, especially during a prototyping phase.
 - The project aims to:
   - Support multiple devices (with priority given to popular ones).
-  - Seamlessly integrate into projects that utilize low-level libraries, such as HAL and LL.
+  - Seamlessly integrate into projects that utilize FreeRTOS and low-level libraries, such as HAL and LL.
 - The project does not aim to:
   - Mimic the low-level functionality of available libraries.
   - Replace HAL, LL or any other low-level library, since the goal is to provide a relatively higher level approach to implement practical use of peripherals.
 - Additional modules and devices will be integrated as the project continues to develop. Here's a progress chart of modules per supported device.
 
-|             |  Timer |  USART  |  ADC   |   I2C  |   SPI  |  FREERTOS  |    USB   |
-|:-----------:|:------:|:-------:|:------:|:------:|:------:|:----------:|:--------:|
-| STM32F103xB | ≥1.0.0 |  ≥1.2.0 | ≥1.3.0 | ≥1.4.0 | ≥1.5.0 |    WIP     |  ≥1.6.0  |
-| STM32F401xC | ≥1.0.0 |  ≥1.2.0 | ≥1.3.0 | ≥1.4.0 | ≥1.5.0 |    WIP     |  ≥1.6.0  |
-| STM32F030x6 | ≥1.1.0 |  ≥1.2.0 | ≥1.3.0 | ≥1.4.0 | ≥1.5.0 |    WIP     |    N/A   |
+|             |  Timer |  USART  |  ADC   |   I2C  |   SPI  |    USB   |
+|:-----------:|:------:|:-------:|:------:|:------:|:------:|:--------:|
+| STM32F103xB | ≥1.0.0 |  ≥1.2.0 | ≥1.3.0 | ≥1.4.0 | ≥1.5.0 |  ≥1.6.0  |
+| STM32F401xC | ≥1.0.0 |  ≥1.2.0 | ≥1.3.0 | ≥1.4.0 | ≥1.5.0 |  ≥1.6.0  |
+| STM32F030x6 | ≥1.1.0 |  ≥1.2.0 | ≥1.3.0 | ≥1.4.0 | ≥1.5.0 |    N/A   |
 
 Compatibility
 =============
