@@ -1,7 +1,11 @@
 Overview
 ========
 <img src="https://raw.githubusercontent.com/ushumgigal/hierodule/main/hierodule.png" />
-<br><br>Hierodule is a utility module set for STM32 MCUs.
+
+![GitHub Release](https://img.shields.io/github/v/release/ushumgigal/hierodule?display_name=release&style=plastic)
+![License](https://img.shields.io/badge/License-MIT-aquamarine?style=plastic)
+
+Hierodule is a utility module set for STM32 MCUs.
 <br>Link to detailed documentation: https://ushumgigal.github.io/hierodule
 
 Aim and Scope of the Project
