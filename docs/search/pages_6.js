@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timer_20module_629',['Timer Module',['../_timer_usage.html',1,'']]]
+  ['spi_20module_0',['SPI Module',['../_s_p_i__usage.html',1,'']]]
 ];

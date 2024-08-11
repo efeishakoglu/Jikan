@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['mit_5flicense_2emd_202',['MIT_LICENSE.md',['../_m_i_t___l_i_c_e_n_s_e_8md.html',1,'']]],
-  ['mode_203',['Mode',['../struct_h_i_e_r_o_d_u_l_e___s_p_i___wrapper.html#ad11c3137711cc547aa65686fa2c98fc9',1,'HIERODULE_SPI_Wrapper']]],
-  ['mrx_5fbuffer_204',['MRX_Buffer',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a24f6c72d35e6338e0871662cf48539e0',1,'HIERODULE_I2C_Wrapper']]],
-  ['mrx_5fbuffersize_205',['MRX_BufferSize',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#aabcbadab8877f7084dc6b6890b6871cb',1,'HIERODULE_I2C_Wrapper']]],
-  ['mrx_5fcounter_206',['MRX_Counter',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a3be1ee78bd42849032caa799c9ecc71c',1,'HIERODULE_I2C_Wrapper']]],
-  ['mrx_5fhandler_207',['MRX_Handler',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a6105121616281f5c1a933d07a6d9bcd4',1,'HIERODULE_I2C_Wrapper']]],
-  ['mtx_5fbuffer_208',['MTX_Buffer',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#aee184a213874d39c2bfab78dc299c0e6',1,'HIERODULE_I2C_Wrapper']]],
-  ['mtx_5fbuffersize_209',['MTX_BufferSize',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a5eed6e269ea2bc120a47ead1067d8237',1,'HIERODULE_I2C_Wrapper']]],
-  ['mtx_5fcounter_210',['MTX_Counter',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#a21667ecee448066d5fe83af0cf652119',1,'HIERODULE_I2C_Wrapper']]],
-  ['mtx_5fhandler_211',['MTX_Handler',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#ae0655ca4db48e8f5066aa722e3327324',1,'HIERODULE_I2C_Wrapper']]]
+  ['data_0',['Data',['../struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#af75ea13d281210e54c4d4c09ea42b1df',1,'HIERODULE_ADC_Wrapper']]],
+  ['data_5fhandler_1',['Data_Handler',['../struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#a20fd92af9b619e1e04ac1da0864799c2',1,'HIERODULE_ADC_Wrapper']]],
+  ['disable_2',['Disable',['../group___s_p_i___private.html#gaeae0b18443a277e2184ead8262e18b96',1,'hierodule_spi.c']]],
+  ['disableclockstretching_3',['DisableClockStretching',['../group___i2_c___private.html#ga1c2f4b72ba9aa0d6fa098f4f0545e008',1,'hierodule_i2c.c']]]
 ];

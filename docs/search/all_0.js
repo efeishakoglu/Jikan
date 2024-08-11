@@ -1,6 +1,22 @@
 var searchData=
 [
-  ['_5fadc_0',['_ADC',['../struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#a14252f85530d18d762205e792e15d14b',1,'HIERODULE_ADC_Wrapper']]],
-  ['_5fi2c_1',['_I2C',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#af1e4c9f988c9de478edaf949424bd244',1,'HIERODULE_I2C_Wrapper']]],
-  ['_5fspi_2',['_SPI',['../struct_h_i_e_r_o_d_u_l_e___s_p_i___wrapper.html#a53ad13fea8255840787ae4a69a2d7392',1,'HIERODULE_SPI_Wrapper']]]
+  ['0_200_202024_2006_2022_0',['[1.0.0] - 2024-06-22',['../_change_log.html#autotoc_md21',1,'']]],
+  ['0_201_202024_2006_2023_1',['[1.0.1] - 2024-06-23',['../_change_log.html#autotoc_md18',1,'']]],
+  ['0_202024_2006_2022_2',['[1.0.0] - 2024-06-22',['../_change_log.html#autotoc_md21',1,'']]],
+  ['0_202024_2006_2025_3',['[1.1.0] - 2024-06-25',['../_change_log.html#autotoc_md15',1,'']]],
+  ['0_202024_2006_2028_4',['[1.2.0] - 2024-06-28',['../_change_log.html#autotoc_md13',1,'']]],
+  ['0_202024_2007_2007_5',['[1.3.0] - 2024-07-07',['../_change_log.html#autotoc_md10',1,'']]],
+  ['0_202024_2007_2018_6',['[1.4.0] - 2024-07-18',['../_change_log.html#autotoc_md8',1,'']]],
+  ['0_202024_2007_2022_7',['[1.5.0] - 2024-07-22',['../_change_log.html#autotoc_md6',1,'']]],
+  ['0_202024_2007_2026_8',['[1.6.0] - 2024-07-26',['../_change_log.html#autotoc_md4',1,'']]],
+  ['06_2022_9',['[1.0.0] - 2024-06-22',['../_change_log.html#autotoc_md21',1,'']]],
+  ['06_2023_10',['[1.0.1] - 2024-06-23',['../_change_log.html#autotoc_md18',1,'']]],
+  ['06_2025_11',['[1.1.0] - 2024-06-25',['../_change_log.html#autotoc_md15',1,'']]],
+  ['06_2028_12',['[1.2.0] - 2024-06-28',['../_change_log.html#autotoc_md13',1,'']]],
+  ['07_13',['[1.3.0] - 2024-07-07',['../_change_log.html#autotoc_md10',1,'']]],
+  ['07_2007_14',['[1.3.0] - 2024-07-07',['../_change_log.html#autotoc_md10',1,'']]],
+  ['07_2018_15',['[1.4.0] - 2024-07-18',['../_change_log.html#autotoc_md8',1,'']]],
+  ['07_2022_16',['[1.5.0] - 2024-07-22',['../_change_log.html#autotoc_md6',1,'']]],
+  ['07_2026_17',['07 26',['../_change_log.html#autotoc_md4',1,'[1.6.0] - 2024-07-26'],['../_change_log.html#autotoc_md2',1,'[1.6.1] - 2024-07-26']]],
+  ['07_2027_18',['[1.6.2] - 2024-07-27',['../_change_log.html#autotoc_md0',1,'']]]
 ];

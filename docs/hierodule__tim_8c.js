@@ -1,7 +1,7 @@
 var hierodule__tim_8c =
 [
     [ "T2V_Function_Pointer", "group___t_i_m___private.html#gae12de36b8634e051adb18a07fd24b9a2", null ],
-    [ "ChannelSelector", "group___t_i_m___private.html#ga73e57a303d011305530e734dfcaa09cd", null ],
+    [ "ChannelSelector", "group___t_i_m___private.html#ga92f7f5a70791f5091f3537d62fa86cac", null ],
     [ "Check_IT", "group___t_i_m___private.html#ga8b5edbe1056c0f615adf91dd783bd226", null ],
     [ "GetBaseFreq", "group___t_i_m___private.html#gac7642937b574a36b1c269d7aa7e03d8f", null ],
     [ "HIERODULE_TIM_Assign_ISR_BRK", "group___t_i_m___public.html#gaf4e034a1bc65f206f06072b93b107c73", null ],

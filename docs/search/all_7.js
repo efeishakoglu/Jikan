@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['getbasefreq_56',['GetBaseFreq',['../group___t_i_m___private.html#gac7642937b574a36b1c269d7aa7e03d8f',1,'hierodule_tim.c']]],
-  ['global_57',['Global',['../group___a_d_c___public.html',1,'(Global Namespace)'],['../group___i2_c___public.html',1,'(Global Namespace)'],['../group___s_p_i___public.html',1,'(Global Namespace)'],['../group___t_i_m___public.html',1,'(Global Namespace)'],['../group___u_s_a_r_t___public.html',1,'(Global Namespace)'],['../group___u_s_b___public.html',1,'(Global Namespace)']]]
+  ['_5fadc_0',['_ADC',['../struct_h_i_e_r_o_d_u_l_e___a_d_c___wrapper.html#a14252f85530d18d762205e792e15d14b',1,'HIERODULE_ADC_Wrapper']]],
+  ['_5fi2c_1',['_I2C',['../struct_h_i_e_r_o_d_u_l_e___i2_c___wrapper.html#af1e4c9f988c9de478edaf949424bd244',1,'HIERODULE_I2C_Wrapper']]],
+  ['_5fspi_2',['_SPI',['../struct_h_i_e_r_o_d_u_l_e___s_p_i___wrapper.html#a53ad13fea8255840787ae4a69a2d7392',1,'HIERODULE_SPI_Wrapper']]]
 ];

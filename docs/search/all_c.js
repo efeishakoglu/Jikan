@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nack_5fnext_212',['NACK_Next',['../group___i2_c___private.html#gac7701cb3b845a70b49ca8800fd3fc393',1,'hierodule_i2c.c']]]
+  ['enable_0',['Enable',['../group___s_p_i___private.html#gada6b39e80500bd8a2e945e74ea84fb7e',1,'hierodule_spi.c']]],
+  ['enableclockstretching_1',['EnableClockStretching',['../group___i2_c___private.html#gaae61c45130b0f69180c428c05e0e909f',1,'hierodule_i2c.c']]]
 ];
