@@ -568,6 +568,107 @@ uint32_t HIERODULE_TIM_IsEnabledCounter(TIM_TypeDef *Timer);
             void HIERODULE_TIM_Assign_TIM17_ISR(FUNC_POINTER ISR);
 
         /** \cond */
+        #elif defined __STM32G473xx /** \cond */
+        
+/** @brief @rv_tim_assign_isr_plain{timer 1}\n
+  * @rv_def_req_device{__STM32G473xx}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM1_ISR(FUNC_POINTER ISR);
+            
+/** @brief @rv_tim_assign_isr_plain{timer 2}\n
+  * @rv_def_req_device{__STM32G473xx}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM2_ISR(FUNC_POINTER ISR);
+
+/** @brief @rv_tim_assign_isr_plain{timer 3}\n
+  * @rv_def_req_device{__STM32G473xx}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM3_ISR(FUNC_POINTER ISR);	
+
+/** @brief @rv_tim_assign_isr_plain{timer 4}\n
+  * @rv_def_req_device{__STM32G473xx}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM4_ISR(FUNC_POINTER ISR);
+
+/** @brief @rv_tim_assign_isr_plain{timer 5}\n
+  * @rv_def_req_device{__STM32G473xx}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM5_ISR(FUNC_POINTER ISR);
+
+/** @brief @rv_tim_assign_isr_plain{timer 6}\n
+  * @rv_def_req_device{__STM32G473xx}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM6_ISR(FUNC_POINTER ISR);
+
+/** @brief @rv_tim_assign_isr_plain{timer 7}\n
+  * @rv_def_req_device{__STM32G473xx}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM7_ISR(FUNC_POINTER ISR);
+
+/** @brief @rv_tim_assign_isr_plain{timer 8}\n
+  * @rv_def_req_device{__STM32G473xx}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM8_ISR(FUNC_POINTER ISR);
+
+/** @brief @rv_tim_assign_isr_plain{timer 15}\n
+  * @rv_def_req_device{__STM32G473xx}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM15_ISR(FUNC_POINTER ISR);
+
+/** @brief @rv_tim_assign_isr_plain{timer 16}\n
+  * @rv_def_req_device{__STM32G473xx}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM16_ISR(FUNC_POINTER ISR);
+
+/** @brief @rv_tim_assign_isr_plain{timer 17}\n
+  * @rv_def_req_device{__STM32G473xx}\n
+  * @rv_def_req{HIERODULE_TIM_HANDLE_IRQ}\n
+  * @rv_not_def_req{HIERODULE_TIM_CONVENIENT_IRQ}
+  * @rv_param_fp_isr
+  * @return None
+  */
+            void HIERODULE_TIM_Assign_TIM17_ISR(FUNC_POINTER ISR);
+        /** \cond */
         #endif
     #endif //HIERODULE_TIM_CONVENIENT_IRQ
 #endif //HIERODULE_TIM_HANDLE_IRQ /** \endcond */
